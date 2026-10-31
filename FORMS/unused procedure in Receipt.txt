@@ -1,0 +1,163 @@
+Private Sub DisplayOrder()
+    Dim rsOrder As New ADODB.Recordset
+    Dim rsOrdDtls As New ADODB.Recordset
+    Dim Qry As String, Ttl As Single
+        
+    If PayType = 0 Then     'Quick Service
+        Qry = "SELECT SRVCJOBORDER.BALANCE, SRVCUSTOMER.CUSTOMER, SRVCUSTOMER.ADDRESS, SRVCJOBORDER.JOBORDERID, SRVCJOBORDER.JOBORDERNO " & _
+              "FROM SRVCJOBORDER INNER JOIN SRVCUSTOMER ON SRVCJOBORDER.ACCOUNTNO = SRVCUSTOMER.ACCOUNTNO WHERE (((SRVCJOBORDER.JOBORDERNO)='" & txtRefNo.Text & "'));"
+    ElseIf PayType = 1 And updRef.Value = 0 Then
+        Qry = "SELECT SPSALESORDER.ORDERNO, SPSALESORDER.ORDERDATE, SPSALESORDER.SPSORDERID, SPSALESORDER.FRONTLINER, SPSALESORDER.EMPID, SPSALESORDER.TOTALPRICE, REQUISITION.JOBNO, REQUISITION.REQID, REQUISITION.REQNO, REQUISITION.CUSTOMER " & _
+              "FROM SPSALESORDER INNER JOIN REQUISITION ON SPSALESORDER.REQID = REQUISITION.REQID " & _
+              "WHERE (((SPSALESORDER.INVOICENO) Is Null) AND ((REQUISITION.REQNO)='" & txtRefNo.Text & "'));"
+    ElseIf PayType = 1 And updRef.Value = 1 Then
+        Qry = "SELECT SPSALESORDER.ORDERNO, SPSALESORDER.ORDERDATE, SPSALESORDER.SPSORDERID, SPSALESORDER.FRONTLINER, SPSALESORDER.EMPID, SPSALESORDER.TOTALPRICE, REQUISITION.JOBNO, REQUISITION.REQID, REQUISITION.REQNO, REQUISITION.CUSTOMER " & _
+              "FROM SPSALESORDER INNER JOIN REQUISITION ON SPSALESORDER.REQID = REQUISITION.REQID " & _
+              "WHERE (((SPSALESORDER.ORDERNO)=" & txtRefNo.Text & ") AND ((SPSALESORDER.ORDERDATE)=#" & Date & "#) AND ((SPSALESORDER.INVOICENO) Is Null));"
+    ElseIf PayType = 1 And updRef.Value = 2 Then
+        Qry = "SELECT SPSALESORDER.ORDERNO, SPSALESORDER.ORDERDATE, SPSALESORDER.SPSORDERID, SPSALESORDER.FRONTLINER, SPSALESORDER.EMPID, SPSALESORDER.TOTALPRICE, REQUISITION.JOBNO, REQUISITION.REQID, REQUISITION.REQNO, REQUISITION.CUSTOMER " & _
+              "FROM SPSALESORDER INNER JOIN REQUISITION ON SPSALESORDER.REQID = REQUISITION.REQID " & _
+              "WHERE (((REQUISITION.JOBNO)='" & txtRefNo.Text & "') AND ((SPSALESORDER.INVOICENO) Is Null));"
+    End If
+    With rsOrder
+        .Open Qry, LYRcon, adOpenKeyset, adLockOptimistic
+        If .RecordCount > 0 Then
+            .MoveFirst
+            'txtrefno.Text = !ORDERNO
+            'txtDate.Text = !ORDERDATE
+            txtPartsman.Text = !Frontliner
+            txtSPSorderID.Text = !SPSORDERID
+            txtPayable.Text = Format$(!TotalPrice, "#####0.00")
+            txtEmpID.Text = !EmpId
+            Text1.Visible = True
+            Text2.Visible = True
+            If PayType = 1 And updRef.Value = 0 Then    'Requisition
+                txtSoldTo.Text = !Customer
+                Label1.Caption = "SALES ORDER#"
+                Text1.Text = !ORDERNO
+                Label2.Caption = "JOB ORDER#"
+                Text2.Text = !JobNo
+                txtReqID.Text = !ReqID
+                txtAddress.Text = GetAddress
+            ElseIf PayType = 1 And updRef.Value = 1 Then    'Sales Order
+                txtSoldTo.Text = !Customer
+                Label1.Caption = "REQUISITION#"
+                Text1.Text = !REQNO
+                Label2.Caption = "JOB ORDER#"
+                Text2.Text = !JobNo
+                txtReqID.Text = !ReqID
+                txtAddress.Text = GetAddress
+            ElseIf PayType = 1 And updRef.Value = 2 Then    'Job Order
+                txtSoldTo.Text = !Customer
+                Label1.Caption = "REQUISITION#"
+                Text1.Text = !REQNO
+                Label2.Caption = "SALES ORDER#"
+                Text2.Text = !ORDERNO
+                txtReqID.Text = !ReqID
+                txtAddress.Text = GetAddress
+            End If
+        Else
+            txtRefNo.Text = ""
+            txtPartsman.Text = ""
+            txtSPSorderID.Text = ""
+            txtPayable.Text = ""
+            txtEmpID.Text = ""
+            Label1.Caption = ""
+            Text1.Text = ""
+            Text1.Visible = False
+            Label2.Caption = ""
+            Text2.Text = ""
+            Text2.Visible = False
+        End If
+        .Close
+    End With
+End Sub
+
+
+Private Sub SaveInvoice()
+    Dim rsInv As New ADODB.Recordset
+    Dim rsITR As New ADODB.Recordset
+    Dim rsPayment As New ADODB.Recordset
+    Dim Qry As String, myTtl As Single, Ans As Integer
+    
+    
+    Ans = MsgBox("Do you want to print Invoice?", vbQuestion + vbYesNo, "Print")
+    
+    'Saving Table Spare Parts Invoice
+    myTtl = Val(txtPayable.Text)
+    rsInv.Open "SPInvoice", LYRcon, adOpenKeyset, adLockOptimistic
+    rsInv.AddNew
+    rsInv!SPInvNo = txtInvNo.Text
+    rsInv!Transno = "SI#-" & txtInvNo.Text
+    rsInv!InvDate = txtDate.Text
+    rsInv!ChargeTo = txtSoldTo.Text
+    rsInv!invtype = myInvType
+    rsInv!Address = txtAddress.Text
+    rsInv!Amount = myTtl
+    rsInv!PrintCopy = IIf(Ans <> vbYes, 0, 1)
+    rsInv!Frontliner = txtPartsman.Text
+    rsInv!EmpId = txtEmpID.Text
+    rsInv!SPSORDERID = txtSPSorderID.Text
+    If PayType = 1 Then rsInv!ReqID = txtReqID.Text
+    rsInv!UpdatedBy = UserID
+    rsInv!LastUpdate = Date
+    rsInv!CustomerId = txtCustomerID.Text
+    rsInv.Update
+    rsInv.Close
+    'Unupdated fields: SPPONO, REMARKS, ORNO
+    'Update SPSalesOrder
+    LYRcon.Execute "UPDATE SPSALESORDER SET SPSALESORDER.INVOICENO = '" & txtInvNo.Text & "' " & _
+                   "WHERE (((SPSALESORDER.SPSORDERID)=" & txtSPSorderID.Text & "));"
+    If PayType = 1 Then
+        LYRcon.Execute "UPDATE REQUISITION SET REQUISITION.INVOICENO = '" & txtInvNo.Text & "' " & _
+                       "WHERE (((REQUISITION.REQID)=" & txtReqID.Text & "));"
+    End If
+    If PayType = 0 Then 'Quick Service
+        With rsPayment
+            .Open "Payments", LYRcon, adOpenKeyset, adLockOptimistic
+            .AddNew
+            !PayDate = txtDate.Text
+            !INVOICENO = txtInvNo.Text
+            !SPAREPARTS = Val(txtPayable.Text)
+            !CustomerName = txtSoldTo.Text
+            !EmpId = Val(txtEmpID.Text)
+            !UpdatedBy = UserID
+            !LastUpdate = Now
+            .Update
+            .Close
+        End With
+    End If
+    
+    'Saving Table Spare Parts Inventory Transaction Register
+    With flxORDER
+        For i = 1 To .Rows - 1
+            rsITR.Open "SPITR", LYRcon, adOpenKeyset, adLockOptimistic
+            rsITR.AddNew
+            rsITR!REFERENCE = "SI#-" & txtInvNo.Text
+            rsITR!TransType = "OUT"
+            rsITR!Remarks = IIf(Ans <> vbYes, "Temp", myInvType)
+            rsITR!TransDate = txtDate.Text
+            rsITR!SPAREPARTID = .TextMatrix(i, 7)
+            rsITR!Out = Val(.TextMatrix(i, 1))
+            rsITR!Price = PureNum(.TextMatrix(i, 5))
+            If PayType = 0 Or (PayType = 1 And updRef.Value = 1) Then
+                rsITR!PACKINGLIST = txtRefNo.Text
+            ElseIf PayType = 1 And updRef.Value = 0 Then
+                rsITR!PACKINGLIST = Text1.Text
+            ElseIf PayType = 1 And updRef.Value = 2 Then
+                rsITR!PACKINGLIST = Text2.Text
+            End If
+            rsITR!Source = txtSoldTo.Text
+            rsITR!UpdatedBy = UserID
+            rsITR!LastUpdate = Now
+            rsITR.Update
+            rsITR.Close
+            'Update table Spareparts Qty On hand
+            If Ans = vbYes Then
+                LYRcon.Execute "UPDATE SPAREPARTS SET SPAREPARTS.QTYONHAND = " & Val(.TextMatrix(i, 8)) - Val(.TextMatrix(i, 1)) & ", SPAREPARTS.UPDATEDBY = " & UserID & ", SPAREPARTS.LASTUPDATE = #" & Now & "# " & _
+                           "WHERE (((SPAREPARTS.SPAREPARTID)=" & .TextMatrix(i, 7) & "));"
+            End If
+        Next i
+    End With
+
+End Sub

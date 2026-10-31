@@ -1,0 +1,7 @@
+PARTNUMBER	String	100	
+DESCRIPTION	String	200	
+QTY	Number		
+COST	Number		
+TTLCOST	Number		
+LOCATION	String	100	
+REMARKS	String	150	

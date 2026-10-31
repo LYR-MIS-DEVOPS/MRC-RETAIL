@@ -1,0 +1,181 @@
+Line 207: Class MSComCtl2.UpDown of control UpDRef was not a loaded control class.
+Line 219: Class MSComctlLib.ProgressBar of control Pbar was not a loaded control class.
+Line 248: Class lvButton.lvButtons_H of control cmdReplenish was not a loaded control class.
+Line 308: Class lvButton.lvButtons_H of control cmdInsert was not a loaded control class.
+Line 335: Class lvButton.lvButtons_H of control cmdOptHide was not a loaded control class.
+Line 362: Class lvButton.lvButtons_H of control cmdOptShow was not a loaded control class.
+Line 422: Class MSComCtl2.UpDown of control OptrSQ was not a loaded control class.
+Line 435: Class MSComCtl2.UpDown of control OptrBO was not a loaded control class.
+Line 465: Class MSComCtl2.UpDown of control updBO was not a loaded control class.
+Line 503: Class MSComCtl2.UpDown of control updSQ was not a loaded control class.
+Line 542: Class MSComCtl2.DTPicker of control SDfrom was not a loaded control class.
+Line 596: Class MSComCtl2.DTPicker of control SDto was not a loaded control class.
+Line 617: Class MSComCtl2.UpDown of control OptrQH was not a loaded control class.
+Line 629: Class MSComCtl2.UpDown of control updQH was not a loaded control class.
+Line 818: Class lvButton.lvButtons_H of control cmdFind was not a loaded control class.
+Line 845: Class lvButton.lvButtons_H of control cmdOK was not a loaded control class.
+Line 872: Class lvButton.lvButtons_H of control cmdCancel was not a loaded control class.
+Line 899: Class MSFlexGridLib.MSFlexGrid of control flxSP was not a loaded control class.
+Line 927: Class MSFlexGridLib.MSFlexGrid of control flxSPH was not a loaded control class.
+Line 213: The property name _ExtentX in UpDRef is invalid.
+Line 214: The property name _ExtentY in UpDRef is invalid.
+Line 215: The property name _Version in UpDRef is invalid.
+Line 216: The property name Max in UpDRef is invalid.
+Line 226: The property name _ExtentX in Pbar is invalid.
+Line 227: The property name _ExtentY in Pbar is invalid.
+Line 228: The property name _Version in Pbar is invalid.
+Line 254: The property name _ExtentX in cmdReplenish is invalid.
+Line 255: The property name _ExtentY in cmdReplenish is invalid.
+Line 256: The property name Caption in cmdReplenish is invalid.
+Line 257: The property name CapAlign in cmdReplenish is invalid.
+Line 258: The property name BackStyle in cmdReplenish is invalid.
+Line 268: The property name cGradient in cmdReplenish is invalid.
+Line 269: The property name Mode in cmdReplenish is invalid.
+Line 270: The property name Value in cmdReplenish is invalid.
+Line 271: The property name ImgAlign in cmdReplenish is invalid.
+Line 272: The property name Image in cmdReplenish is invalid.
+Line 273: The property name cBack in cmdReplenish is invalid.
+Line 314: The property name _ExtentX in cmdInsert is invalid.
+Line 315: The property name _ExtentY in cmdInsert is invalid.
+Line 316: The property name Caption in cmdInsert is invalid.
+Line 317: The property name CapAlign in cmdInsert is invalid.
+Line 318: The property name BackStyle in cmdInsert is invalid.
+Line 328: The property name cGradient in cmdInsert is invalid.
+Line 329: The property name Mode in cmdInsert is invalid.
+Line 330: The property name Value in cmdInsert is invalid.
+Line 331: The property name ImgAlign in cmdInsert is invalid.
+Line 332: The property name Image in cmdInsert is invalid.
+Line 333: The property name cBack in cmdInsert is invalid.
+Line 341: The property name _ExtentX in cmdOptHide is invalid.
+Line 342: The property name _ExtentY in cmdOptHide is invalid.
+Line 343: The property name Caption in cmdOptHide is invalid.
+Line 344: The property name CapAlign in cmdOptHide is invalid.
+Line 345: The property name BackStyle in cmdOptHide is invalid.
+Line 355: The property name cGradient in cmdOptHide is invalid.
+Line 356: The property name Mode in cmdOptHide is invalid.
+Line 357: The property name Value in cmdOptHide is invalid.
+Line 358: The property name ImgAlign in cmdOptHide is invalid.
+Line 359: The property name Image in cmdOptHide is invalid.
+Line 360: The property name cBack in cmdOptHide is invalid.
+Line 368: The property name _ExtentX in cmdOptShow is invalid.
+Line 369: The property name _ExtentY in cmdOptShow is invalid.
+Line 370: The property name Caption in cmdOptShow is invalid.
+Line 371: The property name CapAlign in cmdOptShow is invalid.
+Line 372: The property name BackStyle in cmdOptShow is invalid.
+Line 382: The property name cGradient in cmdOptShow is invalid.
+Line 383: The property name Mode in cmdOptShow is invalid.
+Line 384: The property name Value in cmdOptShow is invalid.
+Line 385: The property name ImgAlign in cmdOptShow is invalid.
+Line 386: The property name Image in cmdOptShow is invalid.
+Line 387: The property name cBack in cmdOptShow is invalid.
+Line 428: The property name _ExtentX in OptrSQ is invalid.
+Line 429: The property name _ExtentY in OptrSQ is invalid.
+Line 430: The property name _Version in OptrSQ is invalid.
+Line 431: The property name Value in OptrSQ is invalid.
+Line 432: The property name Max in OptrSQ is invalid.
+Line 441: The property name _ExtentX in OptrBO is invalid.
+Line 442: The property name _ExtentY in OptrBO is invalid.
+Line 443: The property name _Version in OptrBO is invalid.
+Line 444: The property name Max in OptrBO is invalid.
+Line 471: The property name _ExtentX in updBO is invalid.
+Line 472: The property name _ExtentY in updBO is invalid.
+Line 473: The property name _Version in updBO is invalid.
+Line 474: The property name AutoBuddy in updBO is invalid.
+Line 475: The property name BuddyControl in updBO is invalid.
+Line 476: The property name BuddyDispid in updBO is invalid.
+Line 477: The property name OrigLeft in updBO is invalid.
+Line 478: The property name OrigTop in updBO is invalid.
+Line 479: The property name OrigRight in updBO is invalid.
+Line 480: The property name OrigBottom in updBO is invalid.
+Line 481: The property name SyncBuddy in updBO is invalid.
+Line 482: The property name BuddyProperty in updBO is invalid.
+Line 509: The property name _ExtentX in updSQ is invalid.
+Line 510: The property name _ExtentY in updSQ is invalid.
+Line 511: The property name _Version in updSQ is invalid.
+Line 512: The property name AutoBuddy in updSQ is invalid.
+Line 513: The property name BuddyControl in updSQ is invalid.
+Line 514: The property name BuddyDispid in updSQ is invalid.
+Line 515: The property name OrigLeft in updSQ is invalid.
+Line 516: The property name OrigTop in updSQ is invalid.
+Line 517: The property name OrigRight in updSQ is invalid.
+Line 518: The property name OrigBottom in updSQ is invalid.
+Line 519: The property name Max in updSQ is invalid.
+Line 520: The property name SyncBuddy in updSQ is invalid.
+Line 521: The property name BuddyProperty in updSQ is invalid.
+Line 548: The property name _ExtentX in SDfrom is invalid.
+Line 549: The property name _ExtentY in SDfrom is invalid.
+Line 550: The property name _Version in SDfrom is invalid.
+Line 560: The property name Format in SDfrom is invalid.
+Line 561: The property name CurrentDate in SDfrom is invalid.
+Line 602: The property name _ExtentX in SDto is invalid.
+Line 603: The property name _ExtentY in SDto is invalid.
+Line 604: The property name _Version in SDto is invalid.
+Line 614: The property name Format in SDto is invalid.
+Line 615: The property name CurrentDate in SDto is invalid.
+Line 623: The property name _ExtentX in OptrQH is invalid.
+Line 624: The property name _ExtentY in OptrQH is invalid.
+Line 625: The property name _Version in OptrQH is invalid.
+Line 626: The property name Max in OptrQH is invalid.
+Line 635: The property name _ExtentX in updQH is invalid.
+Line 636: The property name _ExtentY in updQH is invalid.
+Line 637: The property name _Version in updQH is invalid.
+Line 638: The property name AutoBuddy in updQH is invalid.
+Line 639: The property name BuddyControl in updQH is invalid.
+Line 640: The property name BuddyDispid in updQH is invalid.
+Line 641: The property name OrigLeft in updQH is invalid.
+Line 642: The property name OrigTop in updQH is invalid.
+Line 643: The property name OrigRight in updQH is invalid.
+Line 644: The property name OrigBottom in updQH is invalid.
+Line 645: The property name Max in updQH is invalid.
+Line 646: The property name SyncBuddy in updQH is invalid.
+Line 647: The property name BuddyProperty in updQH is invalid.
+Line 824: The property name _ExtentX in cmdFind is invalid.
+Line 825: The property name _ExtentY in cmdFind is invalid.
+Line 826: The property name CapAlign in cmdFind is invalid.
+Line 827: The property name BackStyle in cmdFind is invalid.
+Line 828: The property name Shape in cmdFind is invalid.
+Line 838: The property name cGradient in cmdFind is invalid.
+Line 839: The property name Mode in cmdFind is invalid.
+Line 840: The property name Value in cmdFind is invalid.
+Line 841: The property name ImgAlign in cmdFind is invalid.
+Line 842: The property name Image in cmdFind is invalid.
+Line 843: The property name cBack in cmdFind is invalid.
+Line 851: The property name _ExtentX in cmdOK is invalid.
+Line 852: The property name _ExtentY in cmdOK is invalid.
+Line 853: The property name Caption in cmdOK is invalid.
+Line 854: The property name CapAlign in cmdOK is invalid.
+Line 855: The property name BackStyle in cmdOK is invalid.
+Line 865: The property name cGradient in cmdOK is invalid.
+Line 866: The property name Mode in cmdOK is invalid.
+Line 867: The property name Value in cmdOK is invalid.
+Line 868: The property name ImgAlign in cmdOK is invalid.
+Line 869: The property name Image in cmdOK is invalid.
+Line 870: The property name cBack in cmdOK is invalid.
+Line 878: The property name _ExtentX in cmdCancel is invalid.
+Line 879: The property name _ExtentY in cmdCancel is invalid.
+Line 880: The property name Caption in cmdCancel is invalid.
+Line 881: The property name CapAlign in cmdCancel is invalid.
+Line 882: The property name BackStyle in cmdCancel is invalid.
+Line 892: The property name cGradient in cmdCancel is invalid.
+Line 893: The property name Mode in cmdCancel is invalid.
+Line 894: The property name Value in cmdCancel is invalid.
+Line 895: The property name ImgAlign in cmdCancel is invalid.
+Line 896: The property name Image in cmdCancel is invalid.
+Line 897: The property name cBack in cmdCancel is invalid.
+Line 905: The property name _ExtentX in flxSP is invalid.
+Line 906: The property name _ExtentY in flxSP is invalid.
+Line 907: The property name _Version in flxSP is invalid.
+Line 908: The property name Rows in flxSP is invalid.
+Line 909: The property name Cols in flxSP is invalid.
+Line 910: The property name FixedRows in flxSP is invalid.
+Line 911: The property name FixedCols in flxSP is invalid.
+Line 912: The property name RowHeightMin in flxSP is invalid.
+Line 913: The property name BackColorBkg in flxSP is invalid.
+Line 914: The property name FocusRect in flxSP is invalid.
+Line 915: The property name AllowUserResizing in flxSP is invalid.
+Line 933: The property name _ExtentX in flxSPH is invalid.
+Line 934: The property name _ExtentY in flxSPH is invalid.
+Line 935: The property name _Version in flxSPH is invalid.
+Line 936: The property name Cols in flxSPH is invalid.
+Line 937: The property name FixedRows in flxSPH is invalid.
+Line 938: The property name ScrollBars in flxSPH is invalid.

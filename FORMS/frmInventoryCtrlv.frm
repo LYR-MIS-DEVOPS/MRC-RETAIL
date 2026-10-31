@@ -1,0 +1,1274 @@
+VERSION 5.00
+Object = "{C4847593-972C-11D0-9567-00A0C9273C2A}#8.0#0"; "crviewer.dll"
+Object = "{0ECD9B60-23AA-11D0-B351-00A0C9055D8E}#6.0#0"; "MSHFLXGD.OCX"
+Object = "{86CF1D34-0C5F-11D2-A9FC-0000F8754DA1}#2.0#0"; "MSCOMCT2.OCX"
+Object = "{9636DF31-3E13-4EC2-AA5D-37D97950BC8F}#1.0#0"; "ResizeXtra.ocx"
+Object = "{0C8DE9F2-EAFC-44DF-A13F-B5A9B36ED780}#2.0#0"; "lvButton.ocx"
+Object = "{BDC217C8-ED16-11CD-956C-0000C04E4C0A}#1.1#0"; "TABCTL32.OCX"
+Begin VB.Form frmInventoryCtrl 
+   Caption         =   "Inventory Control Summary"
+   ClientHeight    =   7650
+   ClientLeft      =   120
+   ClientTop       =   450
+   ClientWidth     =   14385
+   ControlBox      =   0   'False
+   LinkTopic       =   "Form1"
+   MDIChild        =   -1  'True
+   ScaleHeight     =   7650
+   ScaleWidth      =   14385
+   WindowState     =   2  'Maximized
+   Begin VB.TextBox txtInvID 
+      Height          =   375
+      Left            =   7560
+      TabIndex        =   18
+      Top             =   120
+      Visible         =   0   'False
+      Width           =   1455
+   End
+   Begin VB.Timer Timer2 
+      Enabled         =   0   'False
+      Interval        =   5
+      Left            =   12720
+      Top             =   0
+   End
+   Begin TabDlg.SSTab tabProcessing 
+      Height          =   975
+      Left            =   4560
+      TabIndex        =   9
+      Tag             =   "xyf"
+      Top             =   3240
+      Visible         =   0   'False
+      Width           =   4815
+      _ExtentX        =   8493
+      _ExtentY        =   1720
+      _Version        =   393216
+      Tabs            =   1
+      TabsPerRow      =   1
+      TabHeight       =   520
+      TabCaption(0)   =   "Inventory Control"
+      TabPicture(0)   =   "frmInventoryCtrlv.frx":0000
+      Tab(0).ControlEnabled=   -1  'True
+      Tab(0).Control(0)=   "Label21"
+      Tab(0).Control(0).Enabled=   0   'False
+      Tab(0).Control(1)=   "lblProcess"
+      Tab(0).Control(1).Enabled=   0   'False
+      Tab(0).Control(2)=   "Image2"
+      Tab(0).Control(2).Enabled=   0   'False
+      Tab(0).ControlCount=   3
+      Begin VB.Image Image2 
+         Height          =   720
+         Left            =   240
+         Picture         =   "frmInventoryCtrlv.frx":001C
+         Stretch         =   -1  'True
+         Tag             =   "xyf"
+         Top             =   120
+         Width           =   720
+      End
+      Begin VB.Label lblProcess 
+         Alignment       =   2  'Center
+         BackStyle       =   0  'Transparent
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   9.75
+            Charset         =   0
+            Weight          =   400
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         Height          =   255
+         Left            =   600
+         TabIndex        =   10
+         Tag             =   "xyf"
+         Top             =   600
+         Width           =   3975
+      End
+      Begin VB.Label Label21 
+         Alignment       =   2  'Center
+         Caption         =   "PLEASE WAIT...."
+         BeginProperty Font 
+            Name            =   "Arial"
+            Size            =   12
+            Charset         =   0
+            Weight          =   700
+            Underline       =   0   'False
+            Italic          =   0   'False
+            Strikethrough   =   0   'False
+         EndProperty
+         ForeColor       =   &H000000FF&
+         Height          =   255
+         Left            =   1080
+         TabIndex        =   11
+         Tag             =   "xyf"
+         Top             =   360
+         Width           =   2895
+      End
+   End
+   Begin lvButton.lvButtons_H cmdLoadData 
+      Height          =   375
+      Left            =   0
+      TabIndex        =   3
+      Top             =   0
+      Width           =   1800
+      _ExtentX        =   3175
+      _ExtentY        =   661
+      Caption         =   "&Load Data"
+      CapAlign        =   2
+      BackStyle       =   2
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      cGradient       =   0
+      Mode            =   0
+      Value           =   0   'False
+      ImgAlign        =   1
+      Image           =   "frmInventoryCtrlv.frx":0A14
+      cBack           =   -2147483633
+   End
+   Begin VB.Timer Timer1 
+      Enabled         =   0   'False
+      Interval        =   1
+      Left            =   11520
+      Top             =   0
+   End
+   Begin lvButton.lvButtons_H cmdExit 
+      Height          =   375
+      Left            =   1800
+      TabIndex        =   0
+      Top             =   0
+      Width           =   1800
+      _ExtentX        =   3175
+      _ExtentY        =   661
+      Caption         =   "E&xit Report"
+      CapAlign        =   2
+      BackStyle       =   2
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      cGradient       =   0
+      Mode            =   0
+      Value           =   0   'False
+      ImgAlign        =   1
+      Image           =   "frmInventoryCtrlv.frx":0FAE
+      cBack           =   -2147483633
+   End
+   Begin lvButton.lvButtons_H cmdSaveExcel 
+      Height          =   375
+      Left            =   3600
+      TabIndex        =   1
+      Top             =   0
+      Visible         =   0   'False
+      Width           =   1800
+      _ExtentX        =   3175
+      _ExtentY        =   661
+      Caption         =   "&Save Excel"
+      CapAlign        =   2
+      BackStyle       =   2
+      BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+         Name            =   "MS Sans Serif"
+         Size            =   8.25
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      cGradient       =   0
+      Mode            =   0
+      Value           =   0   'False
+      ImgAlign        =   1
+      Image           =   "frmInventoryCtrlv.frx":1548
+      cBack           =   -2147483633
+   End
+   Begin TabDlg.SSTab tabInvCtrl 
+      Height          =   7095
+      Left            =   120
+      TabIndex        =   2
+      Tag             =   "xyf"
+      Top             =   480
+      Width           =   14175
+      _ExtentX        =   25003
+      _ExtentY        =   12515
+      _Version        =   393216
+      TabsPerRow      =   8
+      TabHeight       =   520
+      TabCaption(0)   =   "Detailed"
+      TabPicture(0)   =   "frmInventoryCtrlv.frx":1AE2
+      Tab(0).ControlEnabled=   -1  'True
+      Tab(0).Control(0)=   "lblTotPN"
+      Tab(0).Control(0).Enabled=   0   'False
+      Tab(0).Control(1)=   "Label2"
+      Tab(0).Control(1).Enabled=   0   'False
+      Tab(0).Control(2)=   "Label1"
+      Tab(0).Control(2).Enabled=   0   'False
+      Tab(0).Control(3)=   "lblClass"
+      Tab(0).Control(3).Enabled=   0   'False
+      Tab(0).Control(4)=   "dtTo"
+      Tab(0).Control(4).Enabled=   0   'False
+      Tab(0).Control(5)=   "dtFrom"
+      Tab(0).Control(5).Enabled=   0   'False
+      Tab(0).Control(6)=   "tabInvCtrlDtls"
+      Tab(0).Control(6).Enabled=   0   'False
+      Tab(0).Control(7)=   "cboClass"
+      Tab(0).Control(7).Enabled=   0   'False
+      Tab(0).ControlCount=   8
+      TabCaption(1)   =   "Print Preview"
+      TabPicture(1)   =   "frmInventoryCtrlv.frx":1AFE
+      Tab(1).ControlEnabled=   0   'False
+      Tab(1).Control(0)=   "tabInvCtrlPreview"
+      Tab(1).ControlCount=   1
+      TabCaption(2)   =   "Graph"
+      TabPicture(2)   =   "frmInventoryCtrlv.frx":1B1A
+      Tab(2).ControlEnabled=   0   'False
+      Tab(2).Control(0)=   "tabInvCtrlGraph"
+      Tab(2).ControlCount=   1
+      Begin VB.ComboBox cboClass 
+         Height          =   315
+         Left            =   12120
+         Style           =   2  'Dropdown List
+         TabIndex        =   35
+         Tag             =   "xyf"
+         Top             =   360
+         Visible         =   0   'False
+         Width           =   1935
+      End
+      Begin TabDlg.SSTab tabInvCtrlPreview 
+         Height          =   6615
+         Left            =   -74880
+         TabIndex        =   14
+         Tag             =   "xyf"
+         Top             =   360
+         Width           =   13965
+         _ExtentX        =   24633
+         _ExtentY        =   11668
+         _Version        =   393216
+         Tabs            =   4
+         TabsPerRow      =   4
+         TabHeight       =   520
+         TabCaption(0)   =   "MOVING NORMAL RANGE"
+         TabPicture(0)   =   "frmInventoryCtrlv.frx":1B36
+         Tab(0).ControlEnabled=   -1  'True
+         Tab(0).Control(0)=   "crInvCtrlMoving"
+         Tab(0).Control(0).Enabled=   0   'False
+         Tab(0).ControlCount=   1
+         TabCaption(1)   =   "MOVING OVER STOCKING"
+         TabPicture(1)   =   "frmInventoryCtrlv.frx":1B52
+         Tab(1).ControlEnabled=   0   'False
+         Tab(1).Control(0)=   "crInvCtrlOverStocking"
+         Tab(1).ControlCount=   1
+         TabCaption(2)   =   "MOVING UNDER STOCKING"
+         TabPicture(2)   =   "frmInventoryCtrlv.frx":1B6E
+         Tab(2).ControlEnabled=   0   'False
+         Tab(2).Control(0)=   "crInvCtrlUndrStocking"
+         Tab(2).ControlCount=   1
+         TabCaption(3)   =   "NON MOVING"
+         TabPicture(3)   =   "frmInventoryCtrlv.frx":1B8A
+         Tab(3).ControlEnabled=   0   'False
+         Tab(3).Control(0)=   "crInvCtrlNonMoving"
+         Tab(3).ControlCount=   1
+         Begin CRVIEWERLibCtl.CRViewer crInvCtrlMoving 
+            Height          =   6135
+            Left            =   120
+            TabIndex        =   15
+            Tag             =   "xyf"
+            Top             =   360
+            Width           =   13695
+            DisplayGroupTree=   0   'False
+            DisplayToolbar  =   -1  'True
+            EnableGroupTree =   0   'False
+            EnableNavigationControls=   -1  'True
+            EnableStopButton=   -1  'True
+            EnablePrintButton=   -1  'True
+            EnableZoomControl=   -1  'True
+            EnableCloseButton=   0   'False
+            EnableProgressControl=   -1  'True
+            EnableSearchControl=   -1  'True
+            EnableRefreshButton=   -1  'True
+            EnableDrillDown =   -1  'True
+            EnableAnimationControl=   -1  'True
+            EnableSelectExpertButton=   0   'False
+            EnableToolbar   =   -1  'True
+            DisplayBorder   =   -1  'True
+            DisplayTabs     =   -1  'True
+            DisplayBackgroundEdge=   -1  'True
+            SelectionFormula=   ""
+            EnablePopupMenu =   -1  'True
+            EnableExportButton=   -1  'True
+            EnableSearchExpertButton=   0   'False
+            EnableHelpButton=   0   'False
+         End
+         Begin CRVIEWERLibCtl.CRViewer crInvCtrlUndrStocking 
+            Height          =   6135
+            Left            =   -74880
+            TabIndex        =   16
+            Tag             =   "xyf"
+            Top             =   360
+            Width           =   13695
+            DisplayGroupTree=   0   'False
+            DisplayToolbar  =   -1  'True
+            EnableGroupTree =   0   'False
+            EnableNavigationControls=   -1  'True
+            EnableStopButton=   -1  'True
+            EnablePrintButton=   -1  'True
+            EnableZoomControl=   -1  'True
+            EnableCloseButton=   0   'False
+            EnableProgressControl=   -1  'True
+            EnableSearchControl=   -1  'True
+            EnableRefreshButton=   -1  'True
+            EnableDrillDown =   -1  'True
+            EnableAnimationControl=   -1  'True
+            EnableSelectExpertButton=   0   'False
+            EnableToolbar   =   -1  'True
+            DisplayBorder   =   -1  'True
+            DisplayTabs     =   -1  'True
+            DisplayBackgroundEdge=   -1  'True
+            SelectionFormula=   ""
+            EnablePopupMenu =   -1  'True
+            EnableExportButton=   -1  'True
+            EnableSearchExpertButton=   0   'False
+            EnableHelpButton=   0   'False
+         End
+         Begin CRVIEWERLibCtl.CRViewer crInvCtrlNonMoving 
+            Height          =   6135
+            Left            =   -74880
+            TabIndex        =   20
+            Tag             =   "xyf"
+            Top             =   360
+            Width           =   13695
+            DisplayGroupTree=   0   'False
+            DisplayToolbar  =   -1  'True
+            EnableGroupTree =   0   'False
+            EnableNavigationControls=   -1  'True
+            EnableStopButton=   -1  'True
+            EnablePrintButton=   -1  'True
+            EnableZoomControl=   -1  'True
+            EnableCloseButton=   0   'False
+            EnableProgressControl=   -1  'True
+            EnableSearchControl=   -1  'True
+            EnableRefreshButton=   -1  'True
+            EnableDrillDown =   -1  'True
+            EnableAnimationControl=   -1  'True
+            EnableSelectExpertButton=   0   'False
+            EnableToolbar   =   -1  'True
+            DisplayBorder   =   -1  'True
+            DisplayTabs     =   -1  'True
+            DisplayBackgroundEdge=   -1  'True
+            SelectionFormula=   ""
+            EnablePopupMenu =   -1  'True
+            EnableExportButton=   -1  'True
+            EnableSearchExpertButton=   0   'False
+            EnableHelpButton=   0   'False
+         End
+         Begin CRVIEWERLibCtl.CRViewer crInvCtrlOverStocking 
+            Height          =   6135
+            Left            =   -74880
+            TabIndex        =   26
+            Tag             =   "xyf"
+            Top             =   360
+            Width           =   13695
+            DisplayGroupTree=   0   'False
+            DisplayToolbar  =   -1  'True
+            EnableGroupTree =   0   'False
+            EnableNavigationControls=   -1  'True
+            EnableStopButton=   -1  'True
+            EnablePrintButton=   -1  'True
+            EnableZoomControl=   -1  'True
+            EnableCloseButton=   0   'False
+            EnableProgressControl=   -1  'True
+            EnableSearchControl=   -1  'True
+            EnableRefreshButton=   -1  'True
+            EnableDrillDown =   -1  'True
+            EnableAnimationControl=   -1  'True
+            EnableSelectExpertButton=   0   'False
+            EnableToolbar   =   -1  'True
+            DisplayBorder   =   -1  'True
+            DisplayTabs     =   -1  'True
+            DisplayBackgroundEdge=   -1  'True
+            SelectionFormula=   ""
+            EnablePopupMenu =   -1  'True
+            EnableExportButton=   -1  'True
+            EnableSearchExpertButton=   0   'False
+            EnableHelpButton=   0   'False
+         End
+      End
+      Begin TabDlg.SSTab tabInvCtrlDtls 
+         Height          =   6255
+         Left            =   120
+         TabIndex        =   12
+         Tag             =   "xyf"
+         Top             =   720
+         Width           =   13935
+         _ExtentX        =   24580
+         _ExtentY        =   11033
+         _Version        =   393216
+         Tabs            =   4
+         Tab             =   3
+         TabsPerRow      =   4
+         TabHeight       =   520
+         TabCaption(0)   =   "MOVING NORMAL RANGE"
+         TabPicture(0)   =   "frmInventoryCtrlv.frx":1BA6
+         Tab(0).ControlEnabled=   0   'False
+         Tab(0).Control(0)=   "flxInvCtrlMoving"
+         Tab(0).ControlCount=   1
+         TabCaption(1)   =   "MOVING OVER STOCKING"
+         TabPicture(1)   =   "frmInventoryCtrlv.frx":1BC2
+         Tab(1).ControlEnabled=   0   'False
+         Tab(1).Control(0)=   "cmdTransOvrStck"
+         Tab(1).Control(1)=   "flxInvCtrlOverStocking"
+         Tab(1).ControlCount=   2
+         TabCaption(2)   =   "MOVING UNDER STOCKING"
+         TabPicture(2)   =   "frmInventoryCtrlv.frx":1BDE
+         Tab(2).ControlEnabled=   0   'False
+         Tab(2).Control(0)=   "cmdBPOprocess"
+         Tab(2).Control(1)=   "flxInvCtrlUndrStocking"
+         Tab(2).ControlCount=   2
+         TabCaption(3)   =   "NON MOVING"
+         TabPicture(3)   =   "frmInventoryCtrlv.frx":1BFA
+         Tab(3).ControlEnabled=   -1  'True
+         Tab(3).Control(0)=   "cmdTransNonMov"
+         Tab(3).Control(0).Enabled=   0   'False
+         Tab(3).Control(1)=   "flxInvCtrlNonMoving"
+         Tab(3).Control(1).Enabled=   0   'False
+         Tab(3).ControlCount=   2
+         Begin MSHierarchicalFlexGridLib.MSHFlexGrid flxInvCtrlMoving 
+            Height          =   5775
+            Left            =   -74880
+            TabIndex        =   13
+            Tag             =   "xyf"
+            Top             =   360
+            Width           =   13695
+            _ExtentX        =   24156
+            _ExtentY        =   10186
+            _Version        =   393216
+            SelectionMode   =   1
+            _NumberOfBands  =   1
+            _Band(0).Cols   =   2
+         End
+         Begin MSHierarchicalFlexGridLib.MSHFlexGrid flxInvCtrlUndrStocking 
+            Height          =   5415
+            Left            =   -74880
+            TabIndex        =   17
+            Tag             =   "xyf"
+            Top             =   720
+            Width           =   13695
+            _ExtentX        =   24156
+            _ExtentY        =   9551
+            _Version        =   393216
+            SelectionMode   =   1
+            _NumberOfBands  =   1
+            _Band(0).Cols   =   2
+         End
+         Begin MSHierarchicalFlexGridLib.MSHFlexGrid flxInvCtrlNonMoving 
+            Height          =   5415
+            Left            =   120
+            TabIndex        =   19
+            Tag             =   "xyf"
+            Top             =   720
+            Width           =   13695
+            _ExtentX        =   24156
+            _ExtentY        =   9551
+            _Version        =   393216
+            SelectionMode   =   1
+            _NumberOfBands  =   1
+            _Band(0).Cols   =   2
+         End
+         Begin MSHierarchicalFlexGridLib.MSHFlexGrid flxInvCtrlOverStocking 
+            Height          =   5415
+            Left            =   -74880
+            TabIndex        =   25
+            Tag             =   "xyf"
+            Top             =   720
+            Width           =   13695
+            _ExtentX        =   24156
+            _ExtentY        =   9551
+            _Version        =   393216
+            SelectionMode   =   1
+            _NumberOfBands  =   1
+            _Band(0).Cols   =   2
+         End
+         Begin lvButton.lvButtons_H cmdBPOprocess 
+            Height          =   375
+            Left            =   -74880
+            TabIndex        =   31
+            Top             =   360
+            Width           =   1680
+            _ExtentX        =   2963
+            _ExtentY        =   661
+            Caption         =   "B.P.O. &Process"
+            CapAlign        =   2
+            BackStyle       =   2
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            cGradient       =   0
+            Mode            =   0
+            Value           =   0   'False
+            ImgAlign        =   1
+            Image           =   "frmInventoryCtrlv.frx":1C16
+            cBack           =   -2147483633
+         End
+         Begin lvButton.lvButtons_H cmdTransOvrStck 
+            Height          =   375
+            Left            =   -74880
+            TabIndex        =   33
+            Top             =   360
+            Width           =   1680
+            _ExtentX        =   2963
+            _ExtentY        =   661
+            Caption         =   "Transfer SP"
+            CapAlign        =   2
+            BackStyle       =   2
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            cGradient       =   0
+            Mode            =   0
+            Value           =   0   'False
+            ImgAlign        =   1
+            Image           =   "frmInventoryCtrlv.frx":21B0
+            cBack           =   -2147483633
+         End
+         Begin lvButton.lvButtons_H cmdTransNonMov 
+            Height          =   375
+            Left            =   120
+            TabIndex        =   34
+            Top             =   360
+            Width           =   1680
+            _ExtentX        =   2963
+            _ExtentY        =   661
+            Caption         =   "Transfer SP"
+            CapAlign        =   2
+            BackStyle       =   2
+            BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
+               Name            =   "MS Sans Serif"
+               Size            =   8.25
+               Charset         =   0
+               Weight          =   400
+               Underline       =   0   'False
+               Italic          =   0   'False
+               Strikethrough   =   0   'False
+            EndProperty
+            cGradient       =   0
+            Mode            =   0
+            Value           =   0   'False
+            ImgAlign        =   1
+            Image           =   "frmInventoryCtrlv.frx":274A
+            cBack           =   -2147483633
+         End
+      End
+      Begin MSComCtl2.DTPicker dtFrom 
+         Height          =   255
+         Left            =   1080
+         TabIndex        =   4
+         Tag             =   "xyf"
+         Top             =   360
+         Width           =   1815
+         _ExtentX        =   3201
+         _ExtentY        =   450
+         _Version        =   393216
+         Enabled         =   0   'False
+         Format          =   119668737
+         CurrentDate     =   42331
+      End
+      Begin MSComCtl2.DTPicker dtTo 
+         Height          =   255
+         Left            =   3960
+         TabIndex        =   5
+         Tag             =   "xyf"
+         Top             =   360
+         Width           =   1815
+         _ExtentX        =   3201
+         _ExtentY        =   450
+         _Version        =   393216
+         Enabled         =   0   'False
+         Format          =   119668737
+         CurrentDate     =   42331
+      End
+      Begin TabDlg.SSTab tabInvCtrlGraph 
+         Height          =   6615
+         Left            =   -74880
+         TabIndex        =   21
+         Tag             =   "xyf"
+         Top             =   360
+         Width           =   13965
+         _ExtentX        =   24633
+         _ExtentY        =   11668
+         _Version        =   393216
+         Tabs            =   5
+         Tab             =   4
+         TabsPerRow      =   5
+         TabHeight       =   520
+         TabCaption(0)   =   "INV CTRL SUMMARY"
+         TabPicture(0)   =   "frmInventoryCtrlv.frx":2CE4
+         Tab(0).ControlEnabled=   0   'False
+         Tab(0).Control(0)=   "crInvCtrlSumGraph"
+         Tab(0).ControlCount=   1
+         TabCaption(1)   =   "MOVING NORMAL RANGE"
+         TabPicture(1)   =   "frmInventoryCtrlv.frx":2D00
+         Tab(1).ControlEnabled=   0   'False
+         Tab(1).Control(0)=   "crMovingGraph"
+         Tab(1).ControlCount=   1
+         TabCaption(2)   =   "MOVING OVER STOCKING"
+         TabPicture(2)   =   "frmInventoryCtrlv.frx":2D1C
+         Tab(2).ControlEnabled=   0   'False
+         Tab(2).Control(0)=   "crOverGraph"
+         Tab(2).ControlCount=   1
+         TabCaption(3)   =   "MOVING UNDER STOCKING"
+         TabPicture(3)   =   "frmInventoryCtrlv.frx":2D38
+         Tab(3).ControlEnabled=   0   'False
+         Tab(3).Control(0)=   "crUnderGraph"
+         Tab(3).ControlCount=   1
+         TabCaption(4)   =   "NON MOVING"
+         TabPicture(4)   =   "frmInventoryCtrlv.frx":2D54
+         Tab(4).ControlEnabled=   -1  'True
+         Tab(4).Control(0)=   "crNonMovingGraph"
+         Tab(4).Control(0).Enabled=   0   'False
+         Tab(4).ControlCount=   1
+         Begin CRVIEWERLibCtl.CRViewer CRViewer2 
+            Height          =   6135
+            Left            =   -74880
+            TabIndex        =   23
+            Tag             =   "xyf"
+            Top             =   360
+            Width           =   13695
+            DisplayGroupTree=   0   'False
+            DisplayToolbar  =   -1  'True
+            EnableGroupTree =   0   'False
+            EnableNavigationControls=   -1  'True
+            EnableStopButton=   -1  'True
+            EnablePrintButton=   -1  'True
+            EnableZoomControl=   -1  'True
+            EnableCloseButton=   0   'False
+            EnableProgressControl=   -1  'True
+            EnableSearchControl=   -1  'True
+            EnableRefreshButton=   -1  'True
+            EnableDrillDown =   -1  'True
+            EnableAnimationControl=   -1  'True
+            EnableSelectExpertButton=   0   'False
+            EnableToolbar   =   -1  'True
+            DisplayBorder   =   -1  'True
+            DisplayTabs     =   -1  'True
+            DisplayBackgroundEdge=   -1  'True
+            SelectionFormula=   ""
+            EnablePopupMenu =   -1  'True
+            EnableExportButton=   0   'False
+            EnableSearchExpertButton=   0   'False
+            EnableHelpButton=   0   'False
+         End
+         Begin CRVIEWERLibCtl.CRViewer CRViewer3 
+            Height          =   6135
+            Left            =   -74880
+            TabIndex        =   24
+            Tag             =   "xyf"
+            Top             =   360
+            Width           =   13695
+            DisplayGroupTree=   0   'False
+            DisplayToolbar  =   -1  'True
+            EnableGroupTree =   0   'False
+            EnableNavigationControls=   -1  'True
+            EnableStopButton=   -1  'True
+            EnablePrintButton=   -1  'True
+            EnableZoomControl=   -1  'True
+            EnableCloseButton=   0   'False
+            EnableProgressControl=   -1  'True
+            EnableSearchControl=   -1  'True
+            EnableRefreshButton=   -1  'True
+            EnableDrillDown =   -1  'True
+            EnableAnimationControl=   -1  'True
+            EnableSelectExpertButton=   0   'False
+            EnableToolbar   =   -1  'True
+            DisplayBorder   =   -1  'True
+            DisplayTabs     =   -1  'True
+            DisplayBackgroundEdge=   -1  'True
+            SelectionFormula=   ""
+            EnablePopupMenu =   -1  'True
+            EnableExportButton=   0   'False
+            EnableSearchExpertButton=   0   'False
+            EnableHelpButton=   0   'False
+         End
+         Begin CRVIEWERLibCtl.CRViewer crInvCtrlSumGraph 
+            Height          =   6135
+            Left            =   -74880
+            TabIndex        =   22
+            Tag             =   "xyf"
+            Top             =   360
+            Width           =   13695
+            DisplayGroupTree=   0   'False
+            DisplayToolbar  =   -1  'True
+            EnableGroupTree =   0   'False
+            EnableNavigationControls=   -1  'True
+            EnableStopButton=   -1  'True
+            EnablePrintButton=   -1  'True
+            EnableZoomControl=   -1  'True
+            EnableCloseButton=   0   'False
+            EnableProgressControl=   -1  'True
+            EnableSearchControl=   -1  'True
+            EnableRefreshButton=   -1  'True
+            EnableDrillDown =   -1  'True
+            EnableAnimationControl=   -1  'True
+            EnableSelectExpertButton=   0   'False
+            EnableToolbar   =   -1  'True
+            DisplayBorder   =   -1  'True
+            DisplayTabs     =   -1  'True
+            DisplayBackgroundEdge=   -1  'True
+            SelectionFormula=   ""
+            EnablePopupMenu =   -1  'True
+            EnableExportButton=   -1  'True
+            EnableSearchExpertButton=   0   'False
+            EnableHelpButton=   0   'False
+         End
+         Begin CRVIEWERLibCtl.CRViewer crMovingGraph 
+            Height          =   6135
+            Left            =   -74880
+            TabIndex        =   27
+            Tag             =   "xyf"
+            Top             =   360
+            Width           =   13695
+            DisplayGroupTree=   0   'False
+            DisplayToolbar  =   -1  'True
+            EnableGroupTree =   0   'False
+            EnableNavigationControls=   -1  'True
+            EnableStopButton=   -1  'True
+            EnablePrintButton=   -1  'True
+            EnableZoomControl=   -1  'True
+            EnableCloseButton=   0   'False
+            EnableProgressControl=   -1  'True
+            EnableSearchControl=   -1  'True
+            EnableRefreshButton=   -1  'True
+            EnableDrillDown =   -1  'True
+            EnableAnimationControl=   -1  'True
+            EnableSelectExpertButton=   0   'False
+            EnableToolbar   =   -1  'True
+            DisplayBorder   =   -1  'True
+            DisplayTabs     =   -1  'True
+            DisplayBackgroundEdge=   -1  'True
+            SelectionFormula=   ""
+            EnablePopupMenu =   -1  'True
+            EnableExportButton=   -1  'True
+            EnableSearchExpertButton=   0   'False
+            EnableHelpButton=   0   'False
+         End
+         Begin CRVIEWERLibCtl.CRViewer crOverGraph 
+            Height          =   6135
+            Left            =   -74880
+            TabIndex        =   28
+            Tag             =   "xyf"
+            Top             =   360
+            Width           =   13695
+            DisplayGroupTree=   0   'False
+            DisplayToolbar  =   -1  'True
+            EnableGroupTree =   0   'False
+            EnableNavigationControls=   -1  'True
+            EnableStopButton=   -1  'True
+            EnablePrintButton=   -1  'True
+            EnableZoomControl=   -1  'True
+            EnableCloseButton=   0   'False
+            EnableProgressControl=   -1  'True
+            EnableSearchControl=   -1  'True
+            EnableRefreshButton=   -1  'True
+            EnableDrillDown =   -1  'True
+            EnableAnimationControl=   -1  'True
+            EnableSelectExpertButton=   0   'False
+            EnableToolbar   =   -1  'True
+            DisplayBorder   =   -1  'True
+            DisplayTabs     =   -1  'True
+            DisplayBackgroundEdge=   -1  'True
+            SelectionFormula=   ""
+            EnablePopupMenu =   -1  'True
+            EnableExportButton=   -1  'True
+            EnableSearchExpertButton=   0   'False
+            EnableHelpButton=   0   'False
+         End
+         Begin CRVIEWERLibCtl.CRViewer crUnderGraph 
+            Height          =   6135
+            Left            =   -74880
+            TabIndex        =   29
+            Tag             =   "xyf"
+            Top             =   360
+            Width           =   13695
+            DisplayGroupTree=   0   'False
+            DisplayToolbar  =   -1  'True
+            EnableGroupTree =   0   'False
+            EnableNavigationControls=   -1  'True
+            EnableStopButton=   -1  'True
+            EnablePrintButton=   -1  'True
+            EnableZoomControl=   -1  'True
+            EnableCloseButton=   0   'False
+            EnableProgressControl=   -1  'True
+            EnableSearchControl=   -1  'True
+            EnableRefreshButton=   -1  'True
+            EnableDrillDown =   -1  'True
+            EnableAnimationControl=   -1  'True
+            EnableSelectExpertButton=   0   'False
+            EnableToolbar   =   -1  'True
+            DisplayBorder   =   -1  'True
+            DisplayTabs     =   -1  'True
+            DisplayBackgroundEdge=   -1  'True
+            SelectionFormula=   ""
+            EnablePopupMenu =   -1  'True
+            EnableExportButton=   -1  'True
+            EnableSearchExpertButton=   0   'False
+            EnableHelpButton=   0   'False
+         End
+         Begin CRVIEWERLibCtl.CRViewer crNonMovingGraph 
+            Height          =   6135
+            Left            =   120
+            TabIndex        =   30
+            Tag             =   "xyf"
+            Top             =   360
+            Width           =   13695
+            DisplayGroupTree=   0   'False
+            DisplayToolbar  =   -1  'True
+            EnableGroupTree =   0   'False
+            EnableNavigationControls=   -1  'True
+            EnableStopButton=   -1  'True
+            EnablePrintButton=   -1  'True
+            EnableZoomControl=   -1  'True
+            EnableCloseButton=   0   'False
+            EnableProgressControl=   -1  'True
+            EnableSearchControl=   -1  'True
+            EnableRefreshButton=   -1  'True
+            EnableDrillDown =   -1  'True
+            EnableAnimationControl=   -1  'True
+            EnableSelectExpertButton=   0   'False
+            EnableToolbar   =   -1  'True
+            DisplayBorder   =   -1  'True
+            DisplayTabs     =   -1  'True
+            DisplayBackgroundEdge=   -1  'True
+            SelectionFormula=   ""
+            EnablePopupMenu =   -1  'True
+            EnableExportButton=   -1  'True
+            EnableSearchExpertButton=   0   'False
+            EnableHelpButton=   0   'False
+         End
+      End
+      Begin VB.Label lblClass 
+         Alignment       =   1  'Right Justify
+         Caption         =   "Classification"
+         Height          =   255
+         Left            =   10680
+         TabIndex        =   36
+         Tag             =   "xyf"
+         Top             =   360
+         Visible         =   0   'False
+         Width           =   1335
+      End
+      Begin VB.Label Label1 
+         Caption         =   "Date From:"
+         Height          =   255
+         Left            =   240
+         TabIndex        =   8
+         Tag             =   "xyf"
+         Top             =   360
+         Width           =   975
+      End
+      Begin VB.Label Label2 
+         Caption         =   "Date To:"
+         Height          =   255
+         Left            =   3120
+         TabIndex        =   7
+         Tag             =   "xyf"
+         Top             =   360
+         Width           =   975
+      End
+      Begin VB.Label lblTotPN 
+         Alignment       =   1  'Right Justify
+         Height          =   255
+         Left            =   10800
+         TabIndex        =   6
+         Tag             =   "xyf"
+         Top             =   360
+         Visible         =   0   'False
+         Width           =   3135
+      End
+   End
+   Begin VB.Label lblToolTip 
+      Height          =   255
+      Left            =   11520
+      TabIndex        =   37
+      Tag             =   "xyf"
+      Top             =   0
+      Width           =   2655
+   End
+   Begin VB.Label lblCheck 
+      Caption         =   "a"
+      BeginProperty Font 
+         Name            =   "Webdings"
+         Size            =   9.75
+         Charset         =   2
+         Weight          =   700
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   255
+      Left            =   600
+      TabIndex        =   32
+      Top             =   7680
+      Visible         =   0   'False
+      Width           =   255
+   End
+   Begin ResizeXtra.RXResizer RXResizer1 
+      Left            =   12000
+      Top             =   0
+      _ExtentX        =   847
+      _ExtentY        =   847
+      RegistryKey     =   "RXB49E"
+      Registered      =   -1  'True
+      m_MDI_Width     =   14625
+      m_MDI_Height    =   8220
+      OriginalBorder  =   10
+      OriginalCaption =   31
+   End
+   Begin VB.Menu mnuInvCtrl 
+      Caption         =   "inventory control"
+      Enabled         =   0   'False
+      Visible         =   0   'False
+   End
+End
+Attribute VB_Name = "frmInventoryCtrl"
+Attribute VB_GlobalNameSpace = False
+Attribute VB_Creatable = False
+Attribute VB_PredeclaredId = True
+Attribute VB_Exposed = False
+Dim rsPrint                         As New Recordset
+Dim timerCount                      As Integer
+Dim invCtrlID                       As Integer
+Dim dsrInvCtrlMoving                As New rptInvCtrlAll
+Dim dsrInvCtrlOverStocking          As New rptInvCtrlAll
+Dim dsrInvCtrlUnderStocking         As New rptInvCtrlAll
+Dim dsrInvCtrlNonMoving             As New rptInvCtrlAll
+Dim dsrInvCtrlSumGraph              As New rptInvCtrlSumGraph
+Dim dsrInvCtrlMovingGraph           As New rptInvCtrlBreakDown
+Dim dsrInvCtrlOverStockingGraph     As New rptInvCtrlBreakDown
+Dim dsrInvCtrlUnderStockingGraph    As New rptInvCtrlBreakDown
+Dim dsrInvCtrlNonMovingGraph        As New rptInvCtrlBreakDown
+
+Public Sub loadInventoryCtrl()
+    On Error GoTo LocalErr
+        Qry = "Call sp_mrcretails.sp_InvCtrlMain('" & SysBranchID & "')"
+        DoEvents
+            If rsAnyUse.State <> 0 Then rsAnyUse.Close
+            Set rsAnyUse = LYRcon.Execute(Qry)
+            If rsAnyUse.RecordCount > 0 Then
+                rsAnyUse.MoveFirst
+                txtInvID.Text = ""
+                txtInvID.Text = rsAnyUse!InvCtrlMainID
+                dtFrom.Value = rsAnyUse!MnthDate
+            End If
+            
+            'Display the inventory ctrl details
+            Call DisplayInventoryCtrl
+    Exit Sub
+            
+LocalErr:
+    MsgBox Err.Description, vbCritical, "Error Loading Procedure"
+End Sub
+
+Public Sub DisplayInventoryCtrl()
+    On Error GoTo LocalErr
+                   
+            'Moving
+            Qry = "Call sp_mrcretails.sp_InvCtrlRptMovingNRange('" & txtInvID.Text & "', '" & cboClass.Text & "')"
+            DoEvents
+            If rsAnyUse.State <> 0 Then rsAnyUse.Close
+            Set rsAnyUse = LYRcon.Execute(Qry)
+            Call loadFlxRecord(rsAnyUse, flxInvCtrlMoving)
+            Call displayCRviewer(rsAnyUse, crInvCtrlMoving, dsrInvCtrlMoving)
+            
+            'Over stocking
+            Qry = "Call sp_mrcretails.sp_InvCtrlRptMovingOStocking('" & txtInvID.Text & "', '" & cboClass.Text & "')"
+            DoEvents
+            If rsAnyUse.State <> 0 Then rsAnyUse.Close
+            Set rsAnyUse = LYRcon.Execute(Qry)
+            Call loadFlxRecord(rsAnyUse, flxInvCtrlOverStocking)
+            Call displayCRviewer(rsAnyUse, crInvCtrlOverStocking, dsrInvCtrlOverStocking)
+            
+            'Under stocking
+            Qry = "Call sp_mrcretails.sp_InvCtrlRptMovingUStocking('" & txtInvID.Text & "', '" & cboClass.Text & "')"
+            DoEvents
+            If rsAnyUse.State <> 0 Then rsAnyUse.Close
+            Set rsAnyUse = LYRcon.Execute(Qry)
+            Call loadFlxRecord(rsAnyUse, flxInvCtrlUndrStocking)
+            Call displayCRviewer(rsAnyUse, crInvCtrlUndrStocking, dsrInvCtrlUnderStocking)
+
+            'Non Moving
+            Qry = "Call sp_mrcretails.sp_InvCtrlRptNonMoving('" & txtInvID.Text & "', '" & cboClass.Text & "')"
+            DoEvents
+            If rsAnyUse.State <> 0 Then rsAnyUse.Close
+            Set rsAnyUse = LYRcon.Execute(Qry)
+            Call loadFlxRecord(rsAnyUse, flxInvCtrlNonMoving)
+            Call displayCRviewer(rsAnyUse, crInvCtrlNonMoving, dsrInvCtrlNonMoving)
+    
+    Exit Sub
+            
+LocalErr:
+    MsgBox Err.Description, vbCritical, "Error Loading Procedure"
+
+End Sub
+
+Private Sub cboClass_Click()
+    Call DisplayInventoryCtrl
+    cmdLoadData.SetFocus
+End Sub
+
+Private Sub cmdBPOprocess_Click()
+        
+    MsgBox "Not yet available", vbInformation, "Transfer OverStocking"
+    Exit Sub
+    With flxInvCtrlUndrStocking
+            For i = 1 To .Rows - 1
+                If flxInvCtrlUndrStocking.TextMatrix(i, 0) <> "" Then
+                    If SPordering.spDtls <> "" Then
+                        SPordering.spDtls = SPordering.spDtls & ",'" & .TextMatrix(i, 10) & "'"
+                    Else
+                        SPordering.spDtls = "'" & .TextMatrix(i, 10) & "'"
+                    End If
+                End If
+            Next i
+    End With
+    
+    If SPordering.spDtls <> "" Then
+        SPordering.MySource = "inventoryCtrl"
+        SPordering.Show
+    Else
+        MsgBox "Please select item", vbCritical, "Inventory Control"
+        Exit Sub
+    End If
+End Sub
+
+Private Sub cmdExit_Click()
+    Unload Me
+    MotoRep.tbMain.Visible = True
+End Sub
+
+Private Sub cmdLoadData_Click()
+    
+    lblTotPN.Visible = True
+    tabProcessing.Visible = True
+    lblProcess.Caption = "Loading Data Components ..."
+    DoEvents
+    Timer1.Enabled = True
+    
+End Sub
+
+Private Sub cmdSaveExcel_Click()
+    
+    MsgBox "Not yet available", vbInformation, "Save Excel"
+        
+End Sub
+
+Private Sub cmdTransNonMov_Click()
+    MsgBox "Not yet available", vbInformation, "Transfer Non Moving"
+End Sub
+
+Private Sub cmdTransOvrStck_Click()
+    MsgBox "Not yet available", vbInformation, "Transfer OverStocking"
+End Sub
+
+
+
+Private Sub flxInvCtrlUndrStocking_DblClick()
+    Exit Sub
+    With flxInvCtrlUndrStocking
+        'If .TextMatrix(.Row, 0) = "" And Val(.TextMatrix(.Row, 1)) > 0 Then
+        If .TextMatrix(.Row, 0) = "" Then
+            .Col = 0
+            .CellFontName = "WEBDINGS"
+            .CellFontSize = 12
+            .Text = "a"
+            '.Text = lblChk.Caption
+            .CellAlignment = 4
+        Else
+            .TextMatrix(.Row, 0) = ""
+        End If
+    End With
+    
+End Sub
+
+Private Sub Form_Load()
+    
+    MotoRep.sBar.Panels(6).Text = frmInventoryCtrl.Caption
+    lblToolTip.ToolTipText = MotoRep.Caption
+    tabInvCtrl.Tab = 0
+    tabInvCtrlDtls = 0
+    dtFrom.Value = ServerTime
+    dtTo.Value = ServerTime
+    
+End Sub
+
+Private Sub RXResizer1_ResizeComplete()
+    With flxInvCtrlMoving
+        .FormatString = "  |<Partnumber|^Qty|^6 Mo.Sales Qty|^Last Date In|^Last Date Out|<Location|<Category|<6mnthdate|<SPID"
+        .ColWidth(0) = 300
+        .ColWidth(1) = (.Width - 300) * 0.2
+        .ColWidth(2) = (.Width - 300) * 0.08
+        .ColWidth(3) = (.Width - 300) * 0.08
+        .ColWidth(4) = (.Width - 300) * 0.08
+        .ColWidth(5) = (.Width - 300) * 0.08
+        .ColWidth(6) = (.Width - 300) * 0.2
+        .ColWidth(7) = 0
+        .ColWidth(8) = 0
+        .ColWidth(9) = 0
+        .ColWidth(10) = 0
+        .ColWidth(11) = 0
+        .ColWidth(12) = 0
+        .ColWidth(13) = 0
+        .ColWidth(14) = 0
+    End With
+    With flxInvCtrlOverStocking
+        .FormatString = "  |<Partnumber|^Qty|^6 Mo.Sales Qty|^Last Date In|^Last Date Out|<Location|<Category|<6mnthdate|<SPID"
+        .ColWidth(0) = 300
+        .ColWidth(1) = (.Width - 300) * 0.2
+        .ColWidth(2) = (.Width - 300) * 0.08
+        .ColWidth(3) = (.Width - 300) * 0.08
+        .ColWidth(4) = (.Width - 300) * 0.08
+        .ColWidth(5) = (.Width - 300) * 0.08
+        .ColWidth(6) = (.Width - 300) * 0.2
+        .ColWidth(7) = 0
+        .ColWidth(8) = 0
+        .ColWidth(9) = 0
+        .ColWidth(10) = 0
+        .ColWidth(11) = 0
+        .ColWidth(12) = 0
+        .ColWidth(13) = 0
+        .ColWidth(14) = 0
+    End With
+    With flxInvCtrlNonMoving
+        .FormatString = "  |<Partnumber|^Qty|^6 Mo.Sales Qty|^Last Date In|^Last Date Out|<Location|<Category|<6mnthdate|<SPID"
+        .ColWidth(0) = 300
+        .ColWidth(1) = (.Width - 300) * 0.2
+        .ColWidth(2) = (.Width - 300) * 0.08
+        .ColWidth(3) = (.Width - 300) * 0.08
+        .ColWidth(4) = (.Width - 300) * 0.08
+        .ColWidth(5) = (.Width - 300) * 0.08
+        .ColWidth(6) = (.Width - 300) * 0.2
+        .ColWidth(7) = 0
+        .ColWidth(8) = 0
+        .ColWidth(9) = 0
+        .ColWidth(10) = 0
+        .ColWidth(11) = 0
+        .ColWidth(12) = 0
+        .ColWidth(13) = 0
+        .ColWidth(14) = 0
+    End With
+    With flxInvCtrlUndrStocking
+        .FormatString = "  |<Partnumber|^Qty|^6 Mo.Sales Qty|^Last Date In|^Last Date Out|<Location|<Category|<6mnthdate|<SPID"
+        .ColWidth(0) = 300
+        .ColWidth(1) = (.Width - 300) * 0.2
+        .ColWidth(2) = (.Width - 300) * 0.08
+        .ColWidth(3) = (.Width - 300) * 0.08
+        .ColWidth(4) = (.Width - 300) * 0.08
+        .ColWidth(5) = (.Width - 300) * 0.08
+        .ColWidth(6) = (.Width - 300) * 0.2
+        .ColWidth(7) = 0
+        .ColWidth(8) = 0
+        .ColWidth(9) = 0
+        .ColWidth(10) = 0
+        .ColWidth(11) = 0
+        .ColWidth(12) = 0
+        .ColWidth(13) = 0
+        .ColWidth(14) = 0
+        
+'        chkAll.Left = .Left
+'        chkAll.Top = .Top
+'        chkAll.Width = .ColWidth(0)
+'        .Col
+    End With
+End Sub
+
+Private Sub tabInvCtrl_Click(PreviousTab As Integer)
+    If tabInvCtrl.Tab = 2 Then
+            If txtInvID.Text <> "" Then
+                'Graph Summary
+                Qry = "Call sp_mrcretails.sp_InvCtrlRptGraph('" & txtInvID.Text & "')"
+                DoEvents
+                If rsAnyUse.State <> 0 Then rsAnyUse.Close
+                Set rsAnyUse = LYRcon.Execute(Qry)
+                Call displayCRviewer(rsAnyUse, crInvCtrlSumGraph, dsrInvCtrlSumGraph)
+                
+                'MOVING NORMAL RANGE Graph
+                Qry = "Call sp_mrcretails.sp_InvCtrlRptGraphCatBreakDown('" & txtInvID.Text & "', 'MOVING NORMAL RANGE')"
+                DoEvents
+                If rsAnyUse.State <> 0 Then rsAnyUse.Close
+                Set rsAnyUse = LYRcon.Execute(Qry)
+                Call displayCRviewer(rsAnyUse, crMovingGraph, dsrInvCtrlMovingGraph)
+                
+                'MOVING OVERSTOCKING Graph
+                Qry = "Call sp_mrcretails.sp_InvCtrlRptGraphCatBreakDown('" & txtInvID.Text & "', 'MOVING OVERSTOCKING')"
+                DoEvents
+                If rsAnyUse.State <> 0 Then rsAnyUse.Close
+                Set rsAnyUse = LYRcon.Execute(Qry)
+                Call displayCRviewer(rsAnyUse, crOverGraph, dsrInvCtrlOverStockingGraph)
+                
+                'MOVING UNDERSTOCKING Graph
+                Qry = "Call sp_mrcretails.sp_InvCtrlRptGraphCatBreakDown('" & txtInvID.Text & "', 'MOVING UNDERSTOCKING')"
+                DoEvents
+                If rsAnyUse.State <> 0 Then rsAnyUse.Close
+                Set rsAnyUse = LYRcon.Execute(Qry)
+                Call displayCRviewer(rsAnyUse, crUnderGraph, dsrInvCtrlUnderStockingGraph)
+                
+                'NON MOVING Graph
+                Qry = "Call sp_mrcretails.sp_InvCtrlRptGraphCatBreakDown('" & txtInvID.Text & "', 'NON MOVING')"
+                DoEvents
+                If rsAnyUse.State <> 0 Then rsAnyUse.Close
+                Set rsAnyUse = LYRcon.Execute(Qry)
+                Call displayCRviewer(rsAnyUse, crNonMovingGraph, dsrInvCtrlNonMovingGraph)
+            End If
+    End If
+End Sub
+
+Private Sub Timer1_Timer()
+    Call loadInventoryCtrl
+    DoEvents
+    Timer1.Enabled = False
+    tabProcessing.Visible = False
+    DoEvents
+    Call RXResizer1_ResizeComplete
+    cboClass.Clear
+    cboClass.Visible = True
+    lblClass.Visible = True
+    
+    Qry = "select 'ALL' AS CLASSIFICATION, 0 AS IND " & _
+         "Union select (case when trim(spn.remarks) = '' then 'UNKNOWN' else spn.remarks end) AS CLASSIFICATION, 1 AS IND " & _
+         "from (select distinct remarks from SP_MRCRETAILS.INVCTRLDTLS) as SPN " & _
+         "ORDER BY IND, CLASSIFICATION"
+        
+    With cboClass
+        If rsAnyUse.State <> 0 Then rsAnyUse.Close
+        Set rsAnyUse = LYRcon.Execute(Qry)
+            If rsAnyUse.RecordCount > 0 Then
+                rsAnyUse.MoveFirst
+                Do While Not rsAnyUse.EOF
+                    cboClass.AddItem rsAnyUse!CLASSIFICATION
+                rsAnyUse.MoveNext
+                Loop
+            End If
+        rsAnyUse.Close
+    End With
+    cboClass.Text = "ALL"
+End Sub

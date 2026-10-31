@@ -1,0 +1,48 @@
+            If InStr(.cboSupplier.Text, "HONDA") > 0 Then   'Genuine Honda Parts
+                'Hide partno for replacement
+                txtPartNo1.Visible = False
+                txtPartNo2.Visible = False
+                txtPartNo3.Visible = False
+                lblPartNO.Visible = False
+                lblGPnum.Visible = False
+                Label3.Visible = True
+                txtPartNo.Visible = True
+                Label3.Top = txtPartNo.Top
+                txtPartNo.Text = .flxParts.TextMatrix(sRow, 1)
+                txtType.Text = "GENUINE"
+            Else
+                Label3.Visible = False
+                txtPartNo.Visible = False
+                myPN = .flxParts.TextMatrix(sRow, 1)
+                txtType.Text = "REPLACEMENT"
+                Dash1 = InStr(myPN, "-")
+                Dash2 = InStrRev(myPN, "-")
+                If Dash1 > 0 Then
+                    txtPartNo1.Text = Left$(Left$(myPN, IIf(Dash1 > 0, Dash1, 5)), Dash1 - 1)
+                    If Dash1 > 0 And Dash2 > Dash1 Then
+                        txtPartNo2.Text = Mid$(myPN, Dash1 + 1, 3)
+                        txtPartNo3.Text = Mid$(myPN, Dash2 + 1, Len(myPN) - Dash2)
+                    ElseIf Dash1 = Dash2 Then
+                        txtPartNo2.Text = Mid$(myPN, Dash1 + 1, 3)
+                        txtPartNo3.Text = "" 'Mid$(myPN, Dash2 + 1, Len(myPN) - Dash2)
+                    ElseIf (Dash1 = 0 Or Dash2 = 0) And Len(myPN) > 6 Then
+                        If Dash1 <> 0 Then
+                            txtPartNo2.Text = Mid$(myPN, Dash1 + 1, 3)
+                        Else
+                            txtPartNo2.Text = Mid$(myPN, 6, 3)
+                        End If
+                        If Len(myPN) > 8 Then
+                            txtPartNo3.Text = Mid$(myPN, 9, Len(myPN) - 8)
+                        End If
+                    End If
+                Else
+                    lblPartNO.Caption = myPN
+                    txtPartNo1.Locked = True
+                    txtPartNo2.Locked = True
+                    txtPartNo3.Locked = True
+                End If
+            End If
+            txtSupplier.Text = .cboSupplier.Text
+            txtSupCode.Text = .txtSCode.Text
+            txtDesc.TabIndex = 0
+            If Right$(txtPartNo3.Text, 3) <> txtSupCode.Text Then txtPartNo3.Text = txtPartNo3.Text & txtSupCode.Text

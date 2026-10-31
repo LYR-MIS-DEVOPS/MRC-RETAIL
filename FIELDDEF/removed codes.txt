@@ -1,0 +1,99 @@
+Sub AccessForm()
+    Dim rsMyUser As New ADODB.Recordset
+    Dim MyMenu As Menu
+    Dim Qry As String
+    Dim i As Integer, j As Integer, N As Integer
+    Dim AccFrm(7) As String
+    Dim temp() As String
+    
+    Qry = "SELECT PCUSER.* From PCUSER WHERE (((PCUSER.EMPID)=" & UserID & "));"
+    With rsMyUser
+        .Open Qry, LYRcon, adOpenKeyset, adLockOptimistic
+        .MoveFirst
+        For i = 0 To 6
+            AccFrm(i) = IIf(IsNull(.Fields(i + 4)), "", .Fields(i + 4))
+        Next i
+        .Close
+    End With
+    
+    For j = 0 To 6
+        temp = Split(AccFrm(j), ",")
+        Select Case j
+            Case 0
+                For i = LBound(temp) To UBound(temp)
+                    N = (Val(Left$(temp(i), Len(temp(i)) - 1)))
+                    MotoRep.mnuPers(N).Enabled = True
+                Next i
+            Case 1
+                For i = LBound(temp) To UBound(temp)
+                    N = (Val(Left$(temp(i), Len(temp(i)) - 1)))
+                    MotoRep.mnuProd(N).Enabled = True
+                Next i
+            Case 2
+                For i = LBound(temp) To UBound(temp)
+                    N = (Val(Left$(temp(i), Len(temp(i)) - 1)))
+                    MotoRep.mnuMC(N).Enabled = True
+                Next i
+            Case 3
+                For i = LBound(temp) To UBound(temp)
+                    N = (Val(Left$(temp(i), Len(temp(i)) - 1)))
+                    MotoRep.mnuSP(N).Enabled = True
+                Next i
+            Case 4
+                For i = LBound(temp) To UBound(temp)
+                    N = (Val(Left$(temp(i), Len(temp(i)) - 1)))
+                    MotoRep.mnuAccts(N).Enabled = True
+                Next i
+            Case 5
+                For i = LBound(temp) To UBound(temp)
+                    N = (Val(Left$(temp(i), Len(temp(i)) - 1)))
+                    MotoRep.mnuReport(N).Enabled = True
+                Next i
+            Case 6
+                For i = LBound(temp) To UBound(temp)
+                    N = (Val(Left$(temp(i), Len(temp(i)) - 1)))
+                    MotoRep.mnuTool(N).Enabled = True
+                Next i
+        End Select
+    Next j
+End Sub
+    Dim crARdmcm As New ARdmcm
+    
+    dFrom = DateSerial(txtYear.Text, cboMonth.ListIndex + 1, 7)
+    dTo = DateAdd("d", -1, DateAdd("m", 1, dFrom))
+    lblCovered.Caption = "Date Covered : " & Format(dFrom, "MMM. dd, yyyy") & " to " & Format(dTo, "MMM. dd, yyyy")
+    
+    Qry = "SELECT DMCM.DMCMNO, DMCM.ADJDATE, UNITORDERED.ACCOUNTNO, DMCM.CUSTOMER, DMCM.REPOSSESS, DMCM.RECLAIM, DMCM.APPLIEDADJ, DMCM.BALANCEADJ, DMCM.DISCOUNTOPT, DMCM.SUBDEALERS, DMCM.OTHERS, DMCM.REASONS, DMCM.PRINTCOPY, DMCM.DMCMID, DMCM.ORDERID " & _
+          "FROM DMCM INNER JOIN UNITORDERED ON DMCM.ORDERID = UNITORDERED.ORDERID Where (((DMCM.ADJDATE) >= #" & dFrom & "# And (DMCM.ADJDATE) <= #" & dTo & "#) And ((DMCM.PRINTCOPY) > 0)) ORDER BY DMCM.ADJDATE;"
+    
+    If rsRPT.State = adStateOpen Then rsRPT.Close
+    rsRPT.Open Qry, LYRcon, adOpenKeyset, adLockOptimistic
+    crARdmcm.DiscardSavedData
+    crARdmcm.Database.SetDataSource rsRPT
+    crARdmcm.EnableParameterPrompting = False
+    crARdmcm.ParameterFields(1).ClearCurrentValueAndRange
+    crARdmcm.ParameterFields(1).AddCurrentValue lblCovered.Caption
+    vwrDmCm.ReportSource = crARdmcm
+    vwrDmCm.ViewReport
+    MotoRep.sBar.Panels(6).Text = "Debit/Credit Memo Print Preview"
+Private Sub chkInterBranch_Click()
+    If chkInterBranch.Value = 1 Then
+        Label2(1).Caption = "O.R. DATE"
+        Label2(2).Caption = "DATE POSTED"
+        lblBranch.Visible = True
+        lblCollector.Visible = False
+        txtTerm.Visible = False
+        txtBranch.Visible = True
+        txtDatePosted.Visible = True
+        txtDatePosted.Text = txtDate.Text
+    Else
+        Label2(1).Caption = "DATE"
+        Label2(2).Caption = "TERM"
+        lblBranch.Visible = False
+        lblCollector.Visible = True
+        txtTerm.Visible = True
+        txtDatePosted.Visible = False
+        txtBranch.Visible = False
+    End If
+End Sub
+

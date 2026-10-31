@@ -1,0 +1,1042 @@
+[Root]
+Most Recent Package=LYRMotorparts
+
+
+[Package|Standard Setup Package 1|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=d:\SourceCode\MRC Retail\win7-Package03232019
+
+[Package|Standard Setup Package 1|Configure DAO ISAMs]
+Applicable=No
+Xbase=No
+Excel=No
+Exchange=No
+Text=No
+Jet 2.x=No
+Lotus=No
+Paradox=No
+
+[Package|Standard Setup Package 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package 1|Files Found]
+pg32conv.dll=C:\Program Files\Seagate Software\Shared\pg32conv.dll
+
+[Package|Standard Setup Package 1|Files Released]
+mtreptgm.mdb=
+spareparts.mdb=
+warehouse.exe=
+partsman.exe=
+
+[Package|Standard Setup Package 1|Missing Dependency Information]
+C:\MOTO-R\PARTSMAN\PartsMan.exe=
+C:\MOTO-R\WAREHOUSE\WareHouse.exe=
+C:\Program Files\YouTube Downloader\MSCOMCTL.OCX=
+C:\WINDOWS\system32\lvButton.ocx=
+C:\WINDOWS\system32\ResizeXtra.ocx=
+C:\Program Files\Common Files\System\ado\msadox.dll=
+C:\Program Files\Common Files\System\ado\msjro.dll=
+C:\Program Files\Seagate Software\Report Designer Component\craxdrt.dll=
+C:\WINDOWS\system32\P2smon.dll=
+C:\Program Files\Microsoft Office\Office12\EXCEL.EXE=
+C:\WINDOWS\system32\mshflxgd.ocx=
+C:\Program Files\Common Files\System\ado\msado21.tlb=
+C:\WINDOWS\system32\msstdfmt.dll=
+C:\Program Files\Common Files\Microsoft Shared\DAO\dao360.dll=
+C:\WINDOWS\system32\msadox.dll=
+C:\WINDOWS\system32\msjro.dll=
+C:\WINDOWS\system32\craxdrt.dll=
+C:\WINDOWS\system32\crviewer.dll=
+C:\WINDOWS\system32\craxddrt.dll=
+C:\Program Files\Common Files\System\ado\msadox28.tlb=
+C:\Program Files\Common Files\System\ado\msado26.tlb=
+
+[Package|Standard Setup Package 1|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\TABCTL32.OCX=
+C:\WINDOWS\system32\MSCOMCTL.OCX=
+C:\WINDOWS\system32\msmask32.ocx=
+C:\WINDOWS\system32\msdatlst.ocx=
+C:\WINDOWS\system32\mscomct2.ocx=
+C:\WINDOWS\system32\comdlg32.ocx=
+C:\WINDOWS\system32\msflxgrd.ocx=
+C:\WINDOWS\system32\msstdfmt.dll=
+C:\WINDOWS\system32\MSHFLXGD.OCX=
+C:\Windows\System32\MSCHRT20.OCX=
+C:\Windows\System32\MSDBRPTR.DLL=
+
+[Package|Standard Setup Package 1|Files Added]
+
+[Package|Standard Setup Package 1|Files Removed]
+c:\moto-r\partsman\partsman.exe=
+c:\moto-r\warehouse\warehouse.exe=
+c:\program files\microsoft visual studio\vb98\wizards\pdwizard\redist\mdac_typ.exe=
+
+[Package|Standard Setup Package 1|Files In Project]
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\system32\P2smon.dll=Yes
+C:\WINDOWS\system32\MSHFLXGD.OCX=Yes
+C:\WINDOWS\system32\MSSTDFMT.DLL=Yes
+C:\WINDOWS\system32\MSFLXGRD.OCX=Yes
+C:\WINDOWS\system32\COMDLG32.OCX=Yes
+C:\WINDOWS\system32\mscomct2.ocx=Yes
+C:\WINDOWS\system32\ResizeXtra.ocx=Yes
+C:\WINDOWS\system32\lvButton.ocx=Yes
+C:\WINDOWS\system32\TABCTL32.OCX=Yes
+C:\WINDOWS\system32\MSDATLST.OCX=Yes
+C:\WINDOWS\system32\MSMASK32.OCX=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\Program Files\Common Files\Microsoft Shared\DAO\dao360.dll=Yes
+C:\WINDOWS\system32\MSCOMCTL.OCX=Yes
+C:\Program Files\Microsoft Office\Office12\EXCEL.EXE=Yes
+C:\WINDOWS\system32\MSCHRT20.OCX=Yes
+C:\WINDOWS\system32\MSDBRPTR.DLL=Yes
+C:\WINDOWS\system32\craxdrt.dll=Yes
+C:\WINDOWS\system32\oleaut32.dll=Yes
+C:\WINDOWS\system32\olepro32.dll=Yes
+C:\WINDOWS\system32\asycfilt.dll=Yes
+C:\WINDOWS\system32\stdole2.tlb=Yes
+C:\Windows\System32\craxddrt.dll=Yes
+C:\Windows\System32\crviewer.dll=Yes
+C:\Program Files\Common Files\System\ado\msjro.dll=Yes
+C:\Program Files\Common Files\System\ado\msado26.tlb=Yes
+C:\Program Files\Common Files\System\ado\msadox28.tlb=Yes
+D:\SourceCode\MRC Retail\MRCRETAIL.exe=Yes
+
+[Package|Standard Setup Package 1|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package 1|Install Locations]
+C:\MOTO-R\MOTO-R.exe=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\P2smon.dll=$(WinSysPath)
+C:\Program Files\Seagate Software\Report Designer Component\craxddrt.dll=$(WinSysPath)
+C:\WINDOWS\system32\Implode.dll=$(AppPath)
+C:\WINDOWS\system32\Crpaig80.dll=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT.DLL=$(WinSysPath)
+C:\WINDOWS\system32\mfc42.dll=$(WinSysPath)
+\program files\seagate software\shared\SSCSDK80.DLL=$(WinSysPath)
+\program files\seagate software\shared\PG32CONV.DLL=$(AppPath)
+C:\WINDOWS\system32\MSHFLXGD.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSSTDFMT.DLL=$(WinSysPath)
+C:\WINDOWS\system32\MSFLXGRD.OCX=$(WinSysPath)
+C:\WINDOWS\system32\COMDLG32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\mscomct2.ocx=$(WinSysPath)
+C:\WINDOWS\system32\ResizeXtra.ocx=$(WinSysPath)
+C:\WINDOWS\system32\lvButton.ocx=$(WinSysPath)
+C:\WINDOWS\system32\mscomctl.ocx=$(WinSysPath)
+C:\WINDOWS\system32\TABCTL32.OCX=$(WinSysPath)
+C:\Program Files\Seagate Software\Viewers\ActiveXViewer\crviewer.dll=$(WinSysPath)
+C:\Program Files\Seagate Software\Report Designer Component\craxdrt.dll=$(WinSysPath)
+C:\WINDOWS\system32\Crystl32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\crpe32.dll=$(WinSysPath)
+C:\WINDOWS\system32\MSDATLST.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSMASK32.OCX=$(WinSysPath)
+C:\Documents and Settings\MIS\My Documents\My Work\Utilities\Ocx\agif11b\AniGif.ocx=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\MOTO-R\PARTSMAN\PartsMan.exe=$(AppPath)
+C:\MOTO-R\WAREHOUSE\WareHouse.exe=$(AppPath)
+C:\MOTO-R\DATABASE\SpareParts.mdb=$(AppPath)
+C:\MOTO-R\DATABASE\MTREPTGM.mdb=$(AppPath)
+C:\Program Files\Common Files\Microsoft Shared\DAO\DAO350.DLL=$(MSDAOPath)
+C:\WINDOWS\system32\msjet35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msjter35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msjint35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\vbajet32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\expsrv.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msrd2x35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msrepl35.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT40.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\VB5DB.DLL=$(WinSysPath)
+C:\Program Files\YouTube Downloader\MSCOMCTL.OCX=$(WinSysPath)
+C:\WINDOWS\system32\AniGif.ocx=$(WinSysPath)
+D:\NewProg\Moto-R Tgm\FORMS\MOTO-R local connection.exe=$(AppPath)
+C:\Program Files\Seagate Software\Shared\sscsdk80.dll=$(WinSysPath)
+C:\Program Files\Seagate Software\Shared\pg32conv.dll=$(AppPath)
+C:\Program Files\Common Files\Microsoft Shared\DAO\dao360.dll=$(MSDAOPath)
+C:\WINDOWS\system32\msjet40.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msjter40.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msjint40.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\mswstr10.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\mswdat10.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msrd2x40.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msrd3x40.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msrepl40.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msjtes40.dll=$(WinSysPathSysFile)
+C:\Program Files\Common Files\System\ado\msjro.dll=$(WinSysPath)
+C:\Program Files\Common Files\System\ado\msadox.dll=$(WinSysPath)
+C:\2mrcRetails\EXEFILES\MRCRETAIL.exe=$(AppPath)
+C:\Program Files\Microsoft Office\Office12\EXCEL.EXE=$(AppPath)
+C:\WINDOWS\system32\MSCHRT20.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSDBRPTR.DLL=$(WinSysPath)
+C:\2mrcRetails\MRCRETAIL.exe=$(AppPath)
+C:\MRC Retail\MRCRETAIL.exe=$(AppPath)
+C:\WINDOWS\system32\oleaut32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\stdole2.tlb=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msvcrt.dll=$(WinSysPath)
+C:\Program Files\Common Files\System\ado\msado21.tlb=$(WinSysPath)
+C:\MRC Retail\MRCRETAIL-ODBCONLINE-KAPALONG.exe=$(AppPath)
+C:\WINDOWS\system32\craxddrt.dll=$(WinSysPath)
+C:\WINDOWS\system32\crviewer.dll=$(WinSysPath)
+C:\WINDOWS\system32\craxdrt.dll=$(WinSysPath)
+C:\WINDOWS\system32\msjro.dll=$(WinSysPath)
+C:\WINDOWS\system32\msadox.dll=$(WinSysPath)
+C:\MRC Retail\MRCRETAIL-ODBC(WH)(MMT).exe=$(AppPath)
+C:\MRC Retail\MRCRETAIL-ODBC(WH)(MTS).exe=$(AppPath)
+C:\MRC Retail\MRCRETAIL2.exe=$(AppPath)
+D:\SourceCode\MRC Retail\MRCRETAIL(Local).exe=$(AppPath)
+C:\Program Files\Common Files\System\ado\msado26.tlb=$(WinSysPath)
+C:\Program Files\Common Files\System\ado\msadox28.tlb=$(WinSysPath)
+D:\SourceCode\MRC Retail\MRCRETAIL.exe=$(AppPath)
+
+[Package|Standard Setup Package 1|Configure Shared Files]
+Applicable=Yes
+C:\MOTO-R\MOTO-R.exe=No
+C:\WINDOWS\system32\Implode.dll=No
+\program files\seagate software\shared\PG32CONV.DLL=No
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+C:\MOTO-R\PARTSMAN\PartsMan.exe=No
+C:\MOTO-R\WAREHOUSE\WareHouse.exe=No
+C:\MOTO-R\DATABASE\SpareParts.mdb=No
+C:\MOTO-R\DATABASE\MTREPTGM.mdb=No
+D:\NewProg\Moto-R Tgm\FORMS\MOTO-R local connection.exe=Yes
+C:\Program Files\Seagate Software\Shared\pg32conv.dll=Yes
+C:\2mrcRetails\EXEFILES\MRCRETAIL.exe=No
+C:\Program Files\Microsoft Office\Office12\EXCEL.EXE=No
+C:\2mrcRetails\MRCRETAIL.exe=No
+C:\MRC Retail\MRCRETAIL.exe=No
+C:\MRC Retail\MRCRETAIL-ODBCONLINE-KAPALONG.exe=No
+C:\MRC Retail\MRCRETAIL-ODBC(WH)(MMT).exe=No
+C:\MRC Retail\MRCRETAIL-ODBC(WH)(MTS).exe=Yes
+C:\MRC Retail\MRCRETAIL2.exe=No
+D:\SourceCode\MRC Retail\MRCRETAIL(Local).exe=No
+D:\SourceCode\MRC Retail\MRCRETAIL.exe=No
+
+[Package|Standard Setup Package 1|Distribution]
+Type=single
+Size=
+Title=MRC RETAIL SYSTEM
+
+[Package|Standard Setup Package 1|IconGroups]
+Group0=MOTO-R REPUBLIC CORP.
+PrivateGroup0=False
+Parent0=$(Programs)
+
+[Package|Standard Setup Package 1|MOTO-R REPUBLIC CORP.]
+Icon1=MOTO-R.exe
+Title1=MOTO-R REPUBLIC CORP.
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Standard Setup Package 1|Package]
+PackageFolder=d:\SourceCode\MRC Retail\win7-Package03232019
+ProjectFolder=D:\SourceCode\MRC Retail\FORMS
+ServerSideCab=
+File1=d:\SourceCode\MRC Retail\win7-Package03232019\setup.exe
+File2=d:\SourceCode\MRC Retail\win7-Package03232019\Setup.Lst
+File3=d:\SourceCode\MRC Retail\win7-Package03232019\MRCRETAIL.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|Dep File 1|Root]
+SubWizProgID=PDWizard.DepPkgSubWiz
+BuildFolder=d:\SourceCode\MRC Retail\win7-Package03232019
+
+[Package|Dep File 1|Configure DAO ISAMs]
+Applicable=No
+Xbase=No
+Excel=No
+Exchange=No
+Text=No
+Jet 2.x=No
+Lotus=No
+Paradox=No
+
+[Package|Dep File 1|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Dep File 1|Files Found]
+pg32conv.dll=C:\Program Files\Seagate Software\Shared\pg32conv.dll
+
+[Package|Dep File 1|Files Released]
+mtreptgm.mdb=
+spareparts.mdb=
+warehouse.exe=
+partsman.exe=
+
+[Package|Dep File 1|Missing Dependency Information]
+C:\MOTO-R\PARTSMAN\PartsMan.exe=
+C:\MOTO-R\WAREHOUSE\WareHouse.exe=
+C:\Program Files\YouTube Downloader\MSCOMCTL.OCX=
+C:\WINDOWS\system32\lvButton.ocx=
+C:\WINDOWS\system32\ResizeXtra.ocx=
+C:\Program Files\Common Files\System\ado\msadox.dll=
+C:\Program Files\Common Files\System\ado\msjro.dll=
+C:\Program Files\Seagate Software\Report Designer Component\craxdrt.dll=
+C:\WINDOWS\system32\P2smon.dll=
+C:\Program Files\Microsoft Office\Office12\EXCEL.EXE=
+C:\WINDOWS\system32\mshflxgd.ocx=
+C:\Program Files\Common Files\System\ado\msado21.tlb=
+C:\WINDOWS\system32\msstdfmt.dll=
+C:\Program Files\Common Files\Microsoft Shared\DAO\dao360.dll=
+C:\WINDOWS\system32\msadox.dll=
+C:\WINDOWS\system32\msjro.dll=
+C:\WINDOWS\system32\craxdrt.dll=
+C:\WINDOWS\system32\crviewer.dll=
+C:\WINDOWS\system32\craxddrt.dll=
+C:\Program Files\Common Files\System\ado\msadox28.tlb=
+C:\Program Files\Common Files\System\ado\msado26.tlb=
+C:\Program Files\Common Files\System\ado\msado28.tlb=
+C:\Program Files\Microsoft Office\Office15\EXCEL.EXE=
+
+[Package|Dep File 1|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\TABCTL32.OCX=
+C:\WINDOWS\system32\MSCOMCTL.OCX=
+C:\WINDOWS\system32\msmask32.ocx=
+C:\WINDOWS\system32\msdatlst.ocx=
+C:\WINDOWS\system32\mscomct2.ocx=
+C:\WINDOWS\system32\comdlg32.ocx=
+C:\WINDOWS\system32\msflxgrd.ocx=
+C:\WINDOWS\system32\msstdfmt.dll=
+C:\WINDOWS\system32\MSHFLXGD.OCX=
+C:\Windows\System32\MSCHRT20.OCX=
+C:\Windows\System32\MSDBRPTR.DLL=
+
+[Package|Dep File 1|Files Added]
+
+[Package|Dep File 1|Files Removed]
+c:\moto-r\partsman\partsman.exe=
+c:\moto-r\warehouse\warehouse.exe=
+c:\program files\microsoft visual studio\vb98\wizards\pdwizard\redist\mdac_typ.exe=
+
+[Package|Dep File 1|Files In Project]
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\system32\P2smon.dll=Yes
+C:\WINDOWS\system32\MSHFLXGD.OCX=Yes
+C:\WINDOWS\system32\MSSTDFMT.DLL=Yes
+C:\WINDOWS\system32\MSFLXGRD.OCX=Yes
+C:\WINDOWS\system32\COMDLG32.OCX=Yes
+C:\WINDOWS\system32\mscomct2.ocx=Yes
+C:\WINDOWS\system32\ResizeXtra.ocx=Yes
+C:\WINDOWS\system32\lvButton.ocx=Yes
+C:\WINDOWS\system32\TABCTL32.OCX=Yes
+C:\WINDOWS\system32\MSDATLST.OCX=Yes
+C:\WINDOWS\system32\MSMASK32.OCX=Yes
+C:\Program Files\Common Files\Microsoft Shared\DAO\dao360.dll=Yes
+C:\WINDOWS\system32\MSCOMCTL.OCX=Yes
+C:\WINDOWS\system32\MSCHRT20.OCX=Yes
+C:\WINDOWS\system32\MSDBRPTR.DLL=Yes
+C:\WINDOWS\system32\craxdrt.dll=Yes
+C:\WINDOWS\system32\oleaut32.dll=Yes
+C:\WINDOWS\system32\olepro32.dll=Yes
+C:\WINDOWS\system32\asycfilt.dll=Yes
+C:\WINDOWS\system32\stdole2.tlb=Yes
+C:\Program Files\Common Files\System\ado\msjro.dll=Yes
+C:\Program Files\Common Files\System\ado\msadox28.tlb=Yes
+\\VBOXSVR\Documents\SOURCECODE\LMPRetail24.06.26-2.exe=Yes
+C:\Program Files\Seagate Software\Report Designer Component\craxddrt.dll=Yes
+C:\Windows\System32\Implode.dll=Yes
+C:\Windows\System32\Crpaig80.dll=Yes
+C:\Windows\System32\msvcrt.dll=Yes
+C:\Windows\System32\mfc42.dll=Yes
+\program files\seagate software\shared\SSCSDK80.DLL=Yes
+\program files\seagate software\shared\PG32CONV.DLL=Yes
+C:\Program Files\Seagate Software\Viewers\ActiveXViewer\crviewer.dll=Yes
+C:\Program Files\Microsoft Office\Office15\EXCEL.EXE=Yes
+C:\Program Files\Common Files\System\ado\msado28.tlb=Yes
+
+[Package|Dep File 1|Configure Registry Files]
+Applicable=No
+
+[Package|Dep File 1|Configure Remote Servers]
+Applicable=No
+
+[Package|Dep File 1|Install Locations]
+C:\MOTO-R\MOTO-R.exe=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\P2smon.dll=$(WinSysPath)
+C:\Program Files\Seagate Software\Report Designer Component\craxddrt.dll=$(WinSysPath)
+C:\WINDOWS\system32\Implode.dll=$(AppPath)
+C:\WINDOWS\system32\Crpaig80.dll=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT.DLL=$(WinSysPath)
+C:\WINDOWS\system32\mfc42.dll=$(WinSysPath)
+\program files\seagate software\shared\SSCSDK80.DLL=$(WinSysPath)
+\program files\seagate software\shared\PG32CONV.DLL=$(AppPath)
+C:\WINDOWS\system32\MSHFLXGD.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSSTDFMT.DLL=$(WinSysPath)
+C:\WINDOWS\system32\MSFLXGRD.OCX=$(WinSysPath)
+C:\WINDOWS\system32\COMDLG32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\mscomct2.ocx=$(WinSysPath)
+C:\WINDOWS\system32\ResizeXtra.ocx=$(WinSysPath)
+C:\WINDOWS\system32\lvButton.ocx=$(WinSysPath)
+C:\WINDOWS\system32\mscomctl.ocx=$(WinSysPath)
+C:\WINDOWS\system32\TABCTL32.OCX=$(WinSysPath)
+C:\Program Files\Seagate Software\Viewers\ActiveXViewer\crviewer.dll=$(WinSysPath)
+C:\Program Files\Seagate Software\Report Designer Component\craxdrt.dll=$(WinSysPath)
+C:\WINDOWS\system32\Crystl32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\crpe32.dll=$(WinSysPath)
+C:\WINDOWS\system32\MSDATLST.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSMASK32.OCX=$(WinSysPath)
+C:\Documents and Settings\MIS\My Documents\My Work\Utilities\Ocx\agif11b\AniGif.ocx=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\MOTO-R\PARTSMAN\PartsMan.exe=$(AppPath)
+C:\MOTO-R\WAREHOUSE\WareHouse.exe=$(AppPath)
+C:\MOTO-R\DATABASE\SpareParts.mdb=$(AppPath)
+C:\MOTO-R\DATABASE\MTREPTGM.mdb=$(AppPath)
+C:\Program Files\Common Files\Microsoft Shared\DAO\DAO350.DLL=$(MSDAOPath)
+C:\WINDOWS\system32\msjet35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msjter35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msjint35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\vbajet32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\expsrv.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msrd2x35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msrepl35.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT40.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\VB5DB.DLL=$(WinSysPath)
+C:\Program Files\YouTube Downloader\MSCOMCTL.OCX=$(WinSysPath)
+C:\WINDOWS\system32\AniGif.ocx=$(WinSysPath)
+D:\NewProg\Moto-R Tgm\FORMS\MOTO-R local connection.exe=$(AppPath)
+C:\Program Files\Seagate Software\Shared\sscsdk80.dll=$(WinSysPath)
+C:\Program Files\Seagate Software\Shared\pg32conv.dll=$(AppPath)
+C:\Program Files\Common Files\Microsoft Shared\DAO\dao360.dll=$(MSDAOPath)
+C:\WINDOWS\system32\msjet40.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msjter40.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msjint40.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\mswstr10.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\mswdat10.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msrd2x40.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msrd3x40.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msrepl40.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msjtes40.dll=$(WinSysPathSysFile)
+C:\Program Files\Common Files\System\ado\msjro.dll=$(WinSysPath)
+C:\Program Files\Common Files\System\ado\msadox.dll=$(WinSysPath)
+C:\2mrcRetails\EXEFILES\MRCRETAIL.exe=$(AppPath)
+C:\Program Files\Microsoft Office\Office12\EXCEL.EXE=$(AppPath)
+C:\WINDOWS\system32\MSCHRT20.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSDBRPTR.DLL=$(WinSysPath)
+C:\2mrcRetails\MRCRETAIL.exe=$(AppPath)
+C:\MRC Retail\MRCRETAIL.exe=$(AppPath)
+C:\WINDOWS\system32\oleaut32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\stdole2.tlb=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msvcrt.dll=$(WinSysPath)
+C:\Program Files\Common Files\System\ado\msado21.tlb=$(WinSysPath)
+C:\MRC Retail\MRCRETAIL-ODBCONLINE-KAPALONG.exe=$(AppPath)
+C:\WINDOWS\system32\craxddrt.dll=$(WinSysPath)
+C:\WINDOWS\system32\crviewer.dll=$(WinSysPath)
+C:\WINDOWS\system32\craxdrt.dll=$(WinSysPath)
+C:\WINDOWS\system32\msjro.dll=$(WinSysPath)
+C:\WINDOWS\system32\msadox.dll=$(WinSysPath)
+C:\MRC Retail\MRCRETAIL-ODBC(WH)(MMT).exe=$(AppPath)
+C:\MRC Retail\MRCRETAIL-ODBC(WH)(MTS).exe=$(AppPath)
+C:\MRC Retail\MRCRETAIL2.exe=$(AppPath)
+D:\SourceCode\MRC Retail\MRCRETAIL(Local).exe=$(AppPath)
+C:\Program Files\Common Files\System\ado\msado26.tlb=$(WinSysPath)
+C:\Program Files\Common Files\System\ado\msadox28.tlb=$(WinSysPath)
+D:\SourceCode\MRC Retail\MRCRETAIL.exe=$(AppPath)
+\\VBOXSVR\Documents\SOURCECODE\LMPRetail24.06.26-2.exe=$(AppPath)
+C:\Program Files\Microsoft Office\Office15\EXCEL.EXE=$(AppPath)
+C:\Program Files\Common Files\System\ado\msado28.tlb=$(WinSysPath)
+
+[Package|Dep File 1|Configure Shared Files]
+Applicable=Yes
+C:\MOTO-R\MOTO-R.exe=No
+C:\WINDOWS\system32\Implode.dll=No
+\program files\seagate software\shared\PG32CONV.DLL=No
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+C:\MOTO-R\PARTSMAN\PartsMan.exe=No
+C:\MOTO-R\WAREHOUSE\WareHouse.exe=No
+C:\MOTO-R\DATABASE\SpareParts.mdb=No
+C:\MOTO-R\DATABASE\MTREPTGM.mdb=No
+D:\NewProg\Moto-R Tgm\FORMS\MOTO-R local connection.exe=Yes
+C:\Program Files\Seagate Software\Shared\pg32conv.dll=Yes
+C:\2mrcRetails\EXEFILES\MRCRETAIL.exe=No
+C:\Program Files\Microsoft Office\Office12\EXCEL.EXE=No
+C:\2mrcRetails\MRCRETAIL.exe=No
+C:\MRC Retail\MRCRETAIL.exe=No
+C:\MRC Retail\MRCRETAIL-ODBCONLINE-KAPALONG.exe=No
+C:\MRC Retail\MRCRETAIL-ODBC(WH)(MMT).exe=No
+C:\MRC Retail\MRCRETAIL-ODBC(WH)(MTS).exe=Yes
+C:\MRC Retail\MRCRETAIL2.exe=No
+D:\SourceCode\MRC Retail\MRCRETAIL(Local).exe=No
+D:\SourceCode\MRC Retail\MRCRETAIL.exe=No
+
+[Package|Dep File 1|Distribution]
+Type=single
+Size=
+Title=MRC RETAIL SYSTEM
+
+[Package|Dep File 1|IconGroups]
+Group0=MOTO-R REPUBLIC CORP.
+PrivateGroup0=False
+Parent0=$(Programs)
+
+[Package|Dep File 1|MOTO-R REPUBLIC CORP.]
+Icon1=MOTO-R.exe
+Title1=MOTO-R REPUBLIC CORP.
+StartIn1=$(AppPath)
+Key1=Icon1
+
+[Package|Dep File 1|DepFile]
+DepCabFile=LMPRetail24.06.26-2.CAB
+DepCabRun=LMPRetail24.06.26-2.INF
+
+[Package|Dep File 1|Package]
+PackageFolder=d:\SourceCode\MRC Retail\win7-Package03232019
+ProjectFolder=\\VBOXSVR\Documents\SOURCECODE\MRC Retail\FORMS
+ServerSideCab=
+File1=d:\SourceCode\MRC Retail\win7-Package03232019\LMPRetail24.06.26-2.DEP
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|Standard Setup Package|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=f:\SOURCECODE\INSTALLER
+
+[Package|Standard Setup Package|Configure DAO ISAMs]
+Applicable=No
+Xbase=No
+Excel=No
+Exchange=No
+Text=No
+Jet 2.x=No
+Lotus=No
+Paradox=No
+
+[Package|Standard Setup Package|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|Standard Setup Package|Files Found]
+pg32conv.dll=C:\Program Files\Seagate Software\Shared\pg32conv.dll
+
+[Package|Standard Setup Package|Files Released]
+mtreptgm.mdb=
+spareparts.mdb=
+warehouse.exe=
+partsman.exe=
+
+[Package|Standard Setup Package|Missing Dependency Information]
+C:\MOTO-R\PARTSMAN\PartsMan.exe=
+C:\MOTO-R\WAREHOUSE\WareHouse.exe=
+C:\Program Files\YouTube Downloader\MSCOMCTL.OCX=
+C:\WINDOWS\system32\lvButton.ocx=
+C:\WINDOWS\system32\ResizeXtra.ocx=
+C:\Program Files\Common Files\System\ado\msadox.dll=
+C:\Program Files\Common Files\System\ado\msjro.dll=
+C:\Program Files\Seagate Software\Report Designer Component\craxdrt.dll=
+C:\WINDOWS\system32\P2smon.dll=
+C:\Program Files\Microsoft Office\Office12\EXCEL.EXE=
+C:\WINDOWS\system32\mshflxgd.ocx=
+C:\Program Files\Common Files\System\ado\msado21.tlb=
+C:\WINDOWS\system32\msstdfmt.dll=
+C:\Program Files\Common Files\Microsoft Shared\DAO\dao360.dll=
+C:\WINDOWS\system32\msadox.dll=
+C:\WINDOWS\system32\msjro.dll=
+C:\WINDOWS\system32\craxdrt.dll=
+C:\WINDOWS\system32\crviewer.dll=
+C:\WINDOWS\system32\craxddrt.dll=
+C:\Program Files\Common Files\System\ado\msadox28.tlb=
+C:\Program Files\Common Files\System\ado\msado26.tlb=
+C:\Program Files\Common Files\System\ado\msado28.tlb=
+C:\Program Files\Microsoft Office\Office15\EXCEL.EXE=
+
+[Package|Standard Setup Package|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\TABCTL32.OCX=
+C:\WINDOWS\system32\MSCOMCTL.OCX=
+C:\WINDOWS\system32\msmask32.ocx=
+C:\WINDOWS\system32\msdatlst.ocx=
+C:\WINDOWS\system32\mscomct2.ocx=
+C:\WINDOWS\system32\comdlg32.ocx=
+C:\WINDOWS\system32\msflxgrd.ocx=
+C:\WINDOWS\system32\msstdfmt.dll=
+C:\WINDOWS\system32\MSHFLXGD.OCX=
+C:\Windows\System32\MSCHRT20.OCX=
+C:\Windows\System32\MSDBRPTR.DLL=
+
+[Package|Standard Setup Package|Files Added]
+
+[Package|Standard Setup Package|Files Removed]
+c:\moto-r\partsman\partsman.exe=
+c:\moto-r\warehouse\warehouse.exe=
+c:\program files\microsoft visual studio\vb98\wizards\pdwizard\redist\mdac_typ.exe=
+
+[Package|Standard Setup Package|Files In Project]
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\system32\P2smon.dll=Yes
+C:\WINDOWS\system32\MSHFLXGD.OCX=Yes
+C:\WINDOWS\system32\MSSTDFMT.DLL=Yes
+C:\WINDOWS\system32\MSFLXGRD.OCX=Yes
+C:\WINDOWS\system32\COMDLG32.OCX=Yes
+C:\WINDOWS\system32\mscomct2.ocx=Yes
+C:\WINDOWS\system32\ResizeXtra.ocx=Yes
+C:\WINDOWS\system32\lvButton.ocx=Yes
+C:\WINDOWS\system32\TABCTL32.OCX=Yes
+C:\WINDOWS\system32\MSDATLST.OCX=Yes
+C:\WINDOWS\system32\MSMASK32.OCX=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\Program Files\Common Files\Microsoft Shared\DAO\dao360.dll=Yes
+C:\WINDOWS\system32\MSCOMCTL.OCX=Yes
+C:\WINDOWS\system32\MSCHRT20.OCX=Yes
+C:\WINDOWS\system32\MSDBRPTR.DLL=Yes
+C:\WINDOWS\system32\craxdrt.dll=Yes
+C:\WINDOWS\system32\oleaut32.dll=Yes
+C:\WINDOWS\system32\olepro32.dll=Yes
+C:\WINDOWS\system32\asycfilt.dll=Yes
+C:\WINDOWS\system32\stdole2.tlb=Yes
+C:\Program Files\Common Files\System\ado\msjro.dll=Yes
+C:\Program Files\Common Files\System\ado\msadox28.tlb=Yes
+\\VBOXSVR\Documents\SOURCECODE\LMPRetail24.06.26-2.exe=Yes
+C:\Program Files\Seagate Software\Report Designer Component\craxddrt.dll=Yes
+C:\Windows\System32\Implode.dll=Yes
+C:\Windows\System32\Crpaig80.dll=Yes
+C:\Windows\System32\msvcrt.dll=Yes
+C:\Windows\System32\mfc42.dll=Yes
+\program files\seagate software\shared\SSCSDK80.DLL=Yes
+\program files\seagate software\shared\PG32CONV.DLL=Yes
+C:\Program Files\Seagate Software\Viewers\ActiveXViewer\crviewer.dll=Yes
+C:\Program Files\Microsoft Office\Office15\EXCEL.EXE=Yes
+C:\Program Files\Common Files\System\ado\msado28.tlb=Yes
+
+[Package|Standard Setup Package|Configure Registry Files]
+Applicable=No
+
+[Package|Standard Setup Package|Configure Remote Servers]
+Applicable=No
+
+[Package|Standard Setup Package|Install Locations]
+C:\MOTO-R\MOTO-R.exe=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\P2smon.dll=$(WinSysPath)
+C:\Program Files\Seagate Software\Report Designer Component\craxddrt.dll=$(WinSysPath)
+C:\WINDOWS\system32\Implode.dll=$(AppPath)
+C:\WINDOWS\system32\Crpaig80.dll=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT.DLL=$(WinSysPath)
+C:\WINDOWS\system32\mfc42.dll=$(WinSysPath)
+\program files\seagate software\shared\SSCSDK80.DLL=$(WinSysPath)
+\program files\seagate software\shared\PG32CONV.DLL=$(AppPath)
+C:\WINDOWS\system32\MSHFLXGD.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSSTDFMT.DLL=$(WinSysPath)
+C:\WINDOWS\system32\MSFLXGRD.OCX=$(WinSysPath)
+C:\WINDOWS\system32\COMDLG32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\mscomct2.ocx=$(WinSysPath)
+C:\WINDOWS\system32\ResizeXtra.ocx=$(WinSysPath)
+C:\WINDOWS\system32\lvButton.ocx=$(WinSysPath)
+C:\WINDOWS\system32\mscomctl.ocx=$(WinSysPath)
+C:\WINDOWS\system32\TABCTL32.OCX=$(WinSysPath)
+C:\Program Files\Seagate Software\Viewers\ActiveXViewer\crviewer.dll=$(WinSysPath)
+C:\Program Files\Seagate Software\Report Designer Component\craxdrt.dll=$(WinSysPath)
+C:\WINDOWS\system32\Crystl32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\crpe32.dll=$(WinSysPath)
+C:\WINDOWS\system32\MSDATLST.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSMASK32.OCX=$(WinSysPath)
+C:\Documents and Settings\MIS\My Documents\My Work\Utilities\Ocx\agif11b\AniGif.ocx=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\MOTO-R\PARTSMAN\PartsMan.exe=$(AppPath)
+C:\MOTO-R\WAREHOUSE\WareHouse.exe=$(AppPath)
+C:\MOTO-R\DATABASE\SpareParts.mdb=$(AppPath)
+C:\MOTO-R\DATABASE\MTREPTGM.mdb=$(AppPath)
+C:\Program Files\Common Files\Microsoft Shared\DAO\DAO350.DLL=$(MSDAOPath)
+C:\WINDOWS\system32\msjet35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msjter35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msjint35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\vbajet32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\expsrv.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msrd2x35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msrepl35.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT40.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\VB5DB.DLL=$(WinSysPath)
+C:\Program Files\YouTube Downloader\MSCOMCTL.OCX=$(WinSysPath)
+C:\WINDOWS\system32\AniGif.ocx=$(WinSysPath)
+D:\NewProg\Moto-R Tgm\FORMS\MOTO-R local connection.exe=$(AppPath)
+C:\Program Files\Seagate Software\Shared\sscsdk80.dll=$(WinSysPath)
+C:\Program Files\Seagate Software\Shared\pg32conv.dll=$(AppPath)
+C:\Program Files\Common Files\Microsoft Shared\DAO\dao360.dll=$(MSDAOPath)
+C:\WINDOWS\system32\msjet40.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msjter40.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msjint40.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\mswstr10.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\mswdat10.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msrd2x40.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msrd3x40.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msrepl40.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msjtes40.dll=$(WinSysPathSysFile)
+C:\Program Files\Common Files\System\ado\msjro.dll=$(WinSysPath)
+C:\Program Files\Common Files\System\ado\msadox.dll=$(WinSysPath)
+C:\2mrcRetails\EXEFILES\MRCRETAIL.exe=$(AppPath)
+C:\Program Files\Microsoft Office\Office12\EXCEL.EXE=$(AppPath)
+C:\WINDOWS\system32\MSCHRT20.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSDBRPTR.DLL=$(WinSysPath)
+C:\2mrcRetails\MRCRETAIL.exe=$(AppPath)
+C:\MRC Retail\MRCRETAIL.exe=$(AppPath)
+C:\WINDOWS\system32\oleaut32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\stdole2.tlb=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msvcrt.dll=$(WinSysPath)
+C:\Program Files\Common Files\System\ado\msado21.tlb=$(WinSysPath)
+C:\MRC Retail\MRCRETAIL-ODBCONLINE-KAPALONG.exe=$(AppPath)
+C:\WINDOWS\system32\craxddrt.dll=$(WinSysPath)
+C:\WINDOWS\system32\crviewer.dll=$(WinSysPath)
+C:\WINDOWS\system32\craxdrt.dll=$(WinSysPath)
+C:\WINDOWS\system32\msjro.dll=$(WinSysPath)
+C:\WINDOWS\system32\msadox.dll=$(WinSysPath)
+C:\MRC Retail\MRCRETAIL-ODBC(WH)(MMT).exe=$(AppPath)
+C:\MRC Retail\MRCRETAIL-ODBC(WH)(MTS).exe=$(AppPath)
+C:\MRC Retail\MRCRETAIL2.exe=$(AppPath)
+D:\SourceCode\MRC Retail\MRCRETAIL(Local).exe=$(AppPath)
+C:\Program Files\Common Files\System\ado\msado26.tlb=$(WinSysPath)
+C:\Program Files\Common Files\System\ado\msadox28.tlb=$(WinSysPath)
+D:\SourceCode\MRC Retail\MRCRETAIL.exe=$(AppPath)
+\\VBOXSVR\Documents\SOURCECODE\LMPRetail24.06.26-2.exe=$(AppPath)
+C:\Program Files\Microsoft Office\Office15\EXCEL.EXE=$(AppPath)
+C:\Program Files\Common Files\System\ado\msado28.tlb=$(WinSysPath)
+
+[Package|Standard Setup Package|Configure Shared Files]
+Applicable=Yes
+C:\MOTO-R\MOTO-R.exe=No
+C:\WINDOWS\system32\Implode.dll=Yes
+\program files\seagate software\shared\PG32CONV.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+C:\MOTO-R\PARTSMAN\PartsMan.exe=No
+C:\MOTO-R\WAREHOUSE\WareHouse.exe=No
+C:\MOTO-R\DATABASE\SpareParts.mdb=No
+C:\MOTO-R\DATABASE\MTREPTGM.mdb=No
+D:\NewProg\Moto-R Tgm\FORMS\MOTO-R local connection.exe=Yes
+C:\Program Files\Seagate Software\Shared\pg32conv.dll=Yes
+C:\2mrcRetails\EXEFILES\MRCRETAIL.exe=No
+C:\Program Files\Microsoft Office\Office12\EXCEL.EXE=No
+C:\2mrcRetails\MRCRETAIL.exe=No
+C:\MRC Retail\MRCRETAIL.exe=No
+C:\MRC Retail\MRCRETAIL-ODBCONLINE-KAPALONG.exe=No
+C:\MRC Retail\MRCRETAIL-ODBC(WH)(MMT).exe=No
+C:\MRC Retail\MRCRETAIL-ODBC(WH)(MTS).exe=Yes
+C:\MRC Retail\MRCRETAIL2.exe=No
+D:\SourceCode\MRC Retail\MRCRETAIL(Local).exe=No
+D:\SourceCode\MRC Retail\MRCRETAIL.exe=No
+\\VBOXSVR\Documents\SOURCECODE\LMPRetail24.06.26-2.exe=Yes
+C:\Program Files\Microsoft Office\Office15\EXCEL.EXE=No
+
+[Package|Standard Setup Package|Distribution]
+Type=single
+Size=
+Title=LYRMP RETAIL SYSTEM
+
+[Package|Standard Setup Package|IconGroups]
+Group0=LYRMP RETAIL PROGRAM
+PrivateGroup0=False
+Parent0=$(Programs)
+
+[Package|Standard Setup Package|Package]
+PackageFolder=f:\SOURCECODE\INSTALLER
+ProjectFolder=\\VBOXSVR\Documents\SOURCECODE\MRC Retail\FORMS
+ServerSideCab=
+File1=f:\SOURCECODE\INSTALLER\setup.exe
+File2=f:\SOURCECODE\INSTALLER\Setup.Lst
+File3=f:\SOURCECODE\INSTALLER\LMPRetail24.06.26-2.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz
+
+
+[Package|LYRMotorparts|Root]
+SubWizProgID=PDWizard.SetupPkgSubWiz
+BuildFolder=f:\SOURCECODE\INSTALLER\LMP NEW PACKAGE INSTALLER
+
+[Package|LYRMotorparts|Configure DAO ISAMs]
+Applicable=No
+Xbase=No
+Excel=No
+Exchange=No
+Text=No
+Jet 2.x=No
+Lotus=No
+Paradox=No
+
+[Package|LYRMotorparts|Configure DAO ODBC]
+JetWorkspace=
+ODBCDirect=
+
+[Package|LYRMotorparts|Files Found]
+pg32conv.dll=C:\Program Files\Seagate Software\Shared\pg32conv.dll
+
+[Package|LYRMotorparts|Files Released]
+mtreptgm.mdb=
+spareparts.mdb=
+warehouse.exe=
+partsman.exe=
+
+[Package|LYRMotorparts|Missing Dependency Information]
+C:\MOTO-R\PARTSMAN\PartsMan.exe=
+C:\MOTO-R\WAREHOUSE\WareHouse.exe=
+C:\Program Files\YouTube Downloader\MSCOMCTL.OCX=
+C:\WINDOWS\system32\lvButton.ocx=
+C:\WINDOWS\system32\ResizeXtra.ocx=
+C:\Program Files\Common Files\System\ado\msadox.dll=
+C:\Program Files\Common Files\System\ado\msjro.dll=
+C:\Program Files\Seagate Software\Report Designer Component\craxdrt.dll=
+C:\WINDOWS\system32\P2smon.dll=
+C:\Program Files\Microsoft Office\Office12\EXCEL.EXE=
+C:\WINDOWS\system32\mshflxgd.ocx=
+C:\Program Files\Common Files\System\ado\msado21.tlb=
+C:\WINDOWS\system32\msstdfmt.dll=
+C:\Program Files\Common Files\Microsoft Shared\DAO\dao360.dll=
+C:\WINDOWS\system32\msadox.dll=
+C:\WINDOWS\system32\msjro.dll=
+C:\WINDOWS\system32\craxdrt.dll=
+C:\WINDOWS\system32\crviewer.dll=
+C:\WINDOWS\system32\craxddrt.dll=
+C:\Program Files\Common Files\System\ado\msadox28.tlb=
+C:\Program Files\Common Files\System\ado\msado26.tlb=
+C:\Program Files\Common Files\System\ado\msado28.tlb=
+C:\Program Files\Microsoft Office\Office15\EXCEL.EXE=
+
+[Package|LYRMotorparts|Out-of-Date Dependency Information]
+C:\WINDOWS\system32\TABCTL32.OCX=
+C:\WINDOWS\system32\MSCOMCTL.OCX=
+C:\WINDOWS\system32\msmask32.ocx=
+C:\WINDOWS\system32\msdatlst.ocx=
+C:\WINDOWS\system32\mscomct2.ocx=
+C:\WINDOWS\system32\comdlg32.ocx=
+C:\WINDOWS\system32\msflxgrd.ocx=
+C:\WINDOWS\system32\msstdfmt.dll=
+C:\WINDOWS\system32\MSHFLXGD.OCX=
+C:\Windows\System32\MSCHRT20.OCX=
+C:\Windows\System32\MSDBRPTR.DLL=
+
+[Package|LYRMotorparts|Files Added]
+
+[Package|LYRMotorparts|Files Removed]
+c:\moto-r\partsman\partsman.exe=
+c:\moto-r\warehouse\warehouse.exe=
+c:\program files\microsoft visual studio\vb98\wizards\pdwizard\redist\mdac_typ.exe=
+
+[Package|LYRMotorparts|Files In Project]
+C:\WINDOWS\system32\msvbvm60.dll=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=Yes
+C:\WINDOWS\system32\P2smon.dll=Yes
+C:\WINDOWS\system32\MSHFLXGD.OCX=Yes
+C:\WINDOWS\system32\MSSTDFMT.DLL=Yes
+C:\WINDOWS\system32\MSFLXGRD.OCX=Yes
+C:\WINDOWS\system32\COMDLG32.OCX=Yes
+C:\WINDOWS\system32\mscomct2.ocx=Yes
+C:\WINDOWS\system32\ResizeXtra.ocx=Yes
+C:\WINDOWS\system32\lvButton.ocx=Yes
+C:\WINDOWS\system32\TABCTL32.OCX=Yes
+C:\WINDOWS\system32\MSDATLST.OCX=Yes
+C:\WINDOWS\system32\MSMASK32.OCX=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=Yes
+C:\WINDOWS\system32\VB6STKIT.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=Yes
+C:\Program Files\Common Files\Microsoft Shared\DAO\dao360.dll=Yes
+C:\WINDOWS\system32\MSCOMCTL.OCX=Yes
+C:\WINDOWS\system32\MSCHRT20.OCX=Yes
+C:\WINDOWS\system32\MSDBRPTR.DLL=Yes
+C:\WINDOWS\system32\craxdrt.dll=Yes
+C:\WINDOWS\system32\oleaut32.dll=Yes
+C:\WINDOWS\system32\olepro32.dll=Yes
+C:\WINDOWS\system32\asycfilt.dll=Yes
+C:\WINDOWS\system32\stdole2.tlb=Yes
+C:\Program Files\Common Files\System\ado\msjro.dll=Yes
+C:\Program Files\Common Files\System\ado\msadox28.tlb=Yes
+C:\Program Files\Seagate Software\Report Designer Component\craxddrt.dll=Yes
+C:\Windows\System32\Implode.dll=Yes
+C:\Windows\System32\Crpaig80.dll=Yes
+C:\Windows\System32\msvcrt.dll=Yes
+C:\Windows\System32\mfc42.dll=Yes
+\program files\seagate software\shared\SSCSDK80.DLL=Yes
+\program files\seagate software\shared\PG32CONV.DLL=Yes
+C:\Program Files\Seagate Software\Viewers\ActiveXViewer\crviewer.dll=Yes
+C:\Program Files\Microsoft Office\Office15\EXCEL.EXE=Yes
+C:\Program Files\Common Files\System\ado\msado28.tlb=Yes
+\\VBOXSVR\Documents\SOURCECODE\compile bundle\LMPRetail24.06.26-odbcBased.exe=Yes
+
+[Package|LYRMotorparts|Configure Registry Files]
+Applicable=No
+
+[Package|LYRMotorparts|Configure Remote Servers]
+Applicable=No
+
+[Package|LYRMotorparts|Install Locations]
+C:\MOTO-R\MOTO-R.exe=$(AppPath)
+C:\WINDOWS\system32\msvbvm60.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEAUT32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\OLEPRO32.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\ASYCFILT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\STDOLE2.TLB=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\COMCAT.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\P2smon.dll=$(WinSysPath)
+C:\Program Files\Seagate Software\Report Designer Component\craxddrt.dll=$(WinSysPath)
+C:\WINDOWS\system32\Implode.dll=$(AppPath)
+C:\WINDOWS\system32\Crpaig80.dll=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT.DLL=$(WinSysPath)
+C:\WINDOWS\system32\mfc42.dll=$(WinSysPath)
+\program files\seagate software\shared\SSCSDK80.DLL=$(WinSysPath)
+\program files\seagate software\shared\PG32CONV.DLL=$(AppPath)
+C:\WINDOWS\system32\MSHFLXGD.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSSTDFMT.DLL=$(WinSysPath)
+C:\WINDOWS\system32\MSFLXGRD.OCX=$(WinSysPath)
+C:\WINDOWS\system32\COMDLG32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\mscomct2.ocx=$(WinSysPath)
+C:\WINDOWS\system32\ResizeXtra.ocx=$(WinSysPath)
+C:\WINDOWS\system32\lvButton.ocx=$(WinSysPath)
+C:\WINDOWS\system32\mscomctl.ocx=$(WinSysPath)
+C:\WINDOWS\system32\TABCTL32.OCX=$(WinSysPath)
+C:\Program Files\Seagate Software\Viewers\ActiveXViewer\crviewer.dll=$(WinSysPath)
+C:\Program Files\Seagate Software\Report Designer Component\craxdrt.dll=$(WinSysPath)
+C:\WINDOWS\system32\Crystl32.OCX=$(WinSysPath)
+C:\WINDOWS\system32\crpe32.dll=$(WinSysPath)
+C:\WINDOWS\system32\MSDATLST.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSMASK32.OCX=$(WinSysPath)
+C:\Documents and Settings\MIS\My Documents\My Work\Utilities\Ocx\agif11b\AniGif.ocx=$(WinSysPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP.EXE=$(AppPath)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\SETUP1.EXE=$(WinPath)
+C:\WINDOWS\system32\VB6STKIT.DLL=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\ST6UNST.EXE=$(WinPath)
+C:\MOTO-R\PARTSMAN\PartsMan.exe=$(AppPath)
+C:\MOTO-R\WAREHOUSE\WareHouse.exe=$(AppPath)
+C:\MOTO-R\DATABASE\SpareParts.mdb=$(AppPath)
+C:\MOTO-R\DATABASE\MTREPTGM.mdb=$(AppPath)
+C:\Program Files\Common Files\Microsoft Shared\DAO\DAO350.DLL=$(MSDAOPath)
+C:\WINDOWS\system32\msjet35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msjter35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msjint35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\vbajet32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\expsrv.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msrd2x35.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msrepl35.dll=$(WinSysPathSysFile)
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MSVCRT40.DLL=$(WinSysPathSysFile)
+C:\WINDOWS\system32\VB5DB.DLL=$(WinSysPath)
+C:\Program Files\YouTube Downloader\MSCOMCTL.OCX=$(WinSysPath)
+C:\WINDOWS\system32\AniGif.ocx=$(WinSysPath)
+D:\NewProg\Moto-R Tgm\FORMS\MOTO-R local connection.exe=$(AppPath)
+C:\Program Files\Seagate Software\Shared\sscsdk80.dll=$(WinSysPath)
+C:\Program Files\Seagate Software\Shared\pg32conv.dll=$(AppPath)
+C:\Program Files\Common Files\Microsoft Shared\DAO\dao360.dll=$(MSDAOPath)
+C:\WINDOWS\system32\msjet40.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msjter40.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msjint40.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\mswstr10.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\mswdat10.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msrd2x40.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msrd3x40.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msrepl40.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msjtes40.dll=$(WinSysPathSysFile)
+C:\Program Files\Common Files\System\ado\msjro.dll=$(WinSysPath)
+C:\Program Files\Common Files\System\ado\msadox.dll=$(WinSysPath)
+C:\2mrcRetails\EXEFILES\MRCRETAIL.exe=$(AppPath)
+C:\Program Files\Microsoft Office\Office12\EXCEL.EXE=$(AppPath)
+C:\WINDOWS\system32\MSCHRT20.OCX=$(WinSysPath)
+C:\WINDOWS\system32\MSDBRPTR.DLL=$(WinSysPath)
+C:\2mrcRetails\MRCRETAIL.exe=$(AppPath)
+C:\MRC Retail\MRCRETAIL.exe=$(AppPath)
+C:\WINDOWS\system32\oleaut32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\olepro32.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\asycfilt.dll=$(WinSysPathSysFile)
+C:\WINDOWS\system32\stdole2.tlb=$(WinSysPathSysFile)
+C:\WINDOWS\system32\msvcrt.dll=$(WinSysPath)
+C:\Program Files\Common Files\System\ado\msado21.tlb=$(WinSysPath)
+C:\MRC Retail\MRCRETAIL-ODBCONLINE-KAPALONG.exe=$(AppPath)
+C:\WINDOWS\system32\craxddrt.dll=$(WinSysPath)
+C:\WINDOWS\system32\crviewer.dll=$(WinSysPath)
+C:\WINDOWS\system32\craxdrt.dll=$(WinSysPath)
+C:\WINDOWS\system32\msjro.dll=$(WinSysPath)
+C:\WINDOWS\system32\msadox.dll=$(WinSysPath)
+C:\MRC Retail\MRCRETAIL-ODBC(WH)(MMT).exe=$(AppPath)
+C:\MRC Retail\MRCRETAIL-ODBC(WH)(MTS).exe=$(AppPath)
+C:\MRC Retail\MRCRETAIL2.exe=$(AppPath)
+D:\SourceCode\MRC Retail\MRCRETAIL(Local).exe=$(AppPath)
+C:\Program Files\Common Files\System\ado\msado26.tlb=$(WinSysPath)
+C:\Program Files\Common Files\System\ado\msadox28.tlb=$(WinSysPath)
+D:\SourceCode\MRC Retail\MRCRETAIL.exe=$(AppPath)
+\\VBOXSVR\Documents\SOURCECODE\LMPRetail24.06.26-2.exe=$(AppPath)
+C:\Program Files\Microsoft Office\Office15\EXCEL.EXE=$(AppPath)
+C:\Program Files\Common Files\System\ado\msado28.tlb=$(WinSysPath)
+\\VBOXSVR\Documents\SOURCECODE\compile bundle\LMPRetail24.06.26-odbcBased.exe=$(AppPath)
+
+[Package|LYRMotorparts|Configure Shared Files]
+Applicable=Yes
+C:\MOTO-R\MOTO-R.exe=No
+C:\WINDOWS\system32\Implode.dll=Yes
+\program files\seagate software\shared\PG32CONV.DLL=Yes
+C:\Program Files\Microsoft Visual Studio\VB98\Wizards\PDWizard\Redist\MDAC_TYP.EXE=Yes
+C:\MOTO-R\PARTSMAN\PartsMan.exe=No
+C:\MOTO-R\WAREHOUSE\WareHouse.exe=No
+C:\MOTO-R\DATABASE\SpareParts.mdb=No
+C:\MOTO-R\DATABASE\MTREPTGM.mdb=No
+D:\NewProg\Moto-R Tgm\FORMS\MOTO-R local connection.exe=Yes
+C:\Program Files\Seagate Software\Shared\pg32conv.dll=Yes
+C:\2mrcRetails\EXEFILES\MRCRETAIL.exe=No
+C:\Program Files\Microsoft Office\Office12\EXCEL.EXE=No
+C:\2mrcRetails\MRCRETAIL.exe=No
+C:\MRC Retail\MRCRETAIL.exe=No
+C:\MRC Retail\MRCRETAIL-ODBCONLINE-KAPALONG.exe=No
+C:\MRC Retail\MRCRETAIL-ODBC(WH)(MMT).exe=No
+C:\MRC Retail\MRCRETAIL-ODBC(WH)(MTS).exe=Yes
+C:\MRC Retail\MRCRETAIL2.exe=No
+D:\SourceCode\MRC Retail\MRCRETAIL(Local).exe=No
+D:\SourceCode\MRC Retail\MRCRETAIL.exe=No
+\\VBOXSVR\Documents\SOURCECODE\LMPRetail24.06.26-2.exe=Yes
+C:\Program Files\Microsoft Office\Office15\EXCEL.EXE=No
+\\VBOXSVR\Documents\SOURCECODE\compile bundle\LMPRetail24.06.26-odbcBased.exe=Yes
+
+[Package|LYRMotorparts|Distribution]
+Type=single
+Size=
+Title=LYRMP RETAIL SYSTEM
+
+[Package|LYRMotorparts|Package]
+PackageFolder=f:\SOURCECODE\INSTALLER\LMP NEW PACKAGE INSTALLER
+ProjectFolder=\\VBOXSVR\Documents\SOURCECODE\MRC Retail\FORMS
+ServerSideCab=
+File1=f:\SOURCECODE\INSTALLER\LMP NEW PACKAGE INSTALLER\setup.exe
+File2=f:\SOURCECODE\INSTALLER\LMP NEW PACKAGE INSTALLER\Setup.Lst
+File3=f:\SOURCECODE\INSTALLER\LMP NEW PACKAGE INSTALLER\LMPRetail24.06.26-odbcBased.CAB
+Handler1=PDWizard.FolderDplySubWiz
+Handler2=PDWizard.WebPostDplySubWiz

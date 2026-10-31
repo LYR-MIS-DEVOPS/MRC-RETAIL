@@ -1,0 +1,10 @@
+INVNO	String	50	54321
+ORNO	String	50	12345
+Customer	String	50	Oracion Leah Flor
+DP	Number		1000.00
+PARTS	Number		1500.00
+SRVC	Number		1300.00
+OTHERS	Number		1400.00
+REMARKS	String	50	JO# 1234 (Partial)
+Cashier	String	50	Palmira Randy
+ORDate	Date		10/31/2007

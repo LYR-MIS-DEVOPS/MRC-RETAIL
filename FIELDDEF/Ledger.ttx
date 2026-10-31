@@ -1,0 +1,6 @@
+LDATE	Date		10/28/2008
+REFNO	String	15	OR#01234
+DEBIT	Number		1000.00
+CREDIT	Number		2500.00
+BALANCE	Number		1500.00
+REMARKS	String	20	Adjustments
